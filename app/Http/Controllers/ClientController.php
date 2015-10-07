@@ -50,9 +50,9 @@ class ClientController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
-        //
+        return Client::find($id)->update($request->all());
     }
 
     /**
