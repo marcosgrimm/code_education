@@ -45,17 +45,6 @@ class ClientController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function edit(Request $request, $id)
-    {
-        return Client::find($id)->update($request->all());
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  Request  $request
@@ -64,7 +53,7 @@ class ClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return Client::find($id)->update($request->all());
     }
 
     /**
