@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeProject;
+namespace CodeProject\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,4 +14,10 @@ class Client extends Model
         'address',
         'obs',
     ];
+
+
+
+    public function projects(){
+        return $this->hasMany(Project::class);
+    }
 }

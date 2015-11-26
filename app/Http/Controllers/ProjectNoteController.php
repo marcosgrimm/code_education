@@ -2,22 +2,22 @@
 
 namespace CodeProject\Http\Controllers;
 
-use CodeProject\Repositories\ClientRepository;
-use CodeProject\Services\ClientService;
+use CodeProject\Repositories\ProjectNoteRepository;
+use CodeProject\Services\ProjectNoteService;
 use Illuminate\Http\Request;
 
-class ClientController extends Controller
+class ProjectNoteController extends Controller
 {
     /**
-     * @var ClientRepository
+     * @var ProjectNoteRepository
      */
     private $repository;
     /**
-     * @var ClientService
+     * @var ProjectNoteService
      */
     private $service;
 
-    public function __construct(ClientRepository $repository, ClientService $service)
+    public function __construct(ProjectNoteRepository $repository, ProjectNoteService $service)
     {
         $this->repository = $repository;
         $this->service = $service;
@@ -28,10 +28,10 @@ class ClientController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function index($id)
     {
 
-        return $this->repository->with(['projects'])->all();
+        return $this->repository->findWhere(['project_id'=>$id]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ClientController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show($id,$noteId)
     {
-        return $this->repository->with(['projects'])->find($id);
+        return $this->repository->findWhere(['project_id'=>$id, 'id'=>$noteId]);
     }
 
     /**
@@ -63,10 +63,10 @@ class ClientController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id,$noteId)
     {
         try{
-            $this->service->update($request->all(),$id);
+            $this->service->update($request->all(),$noteId);
         }
         catch (Exception $e){
             return 'Erro!';
@@ -80,8 +80,8 @@ class ClientController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function destroy($id)
+    public function destroy($id,$noteId)
     {
-        $this->repository->find($id)->delete();
+        $this->repository->find($noteId)->delete();
     }
 }

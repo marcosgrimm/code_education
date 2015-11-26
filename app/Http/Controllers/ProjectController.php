@@ -2,22 +2,23 @@
 
 namespace CodeProject\Http\Controllers;
 
-use CodeProject\Repositories\ClientRepository;
-use CodeProject\Services\ClientService;
+use CodeProject\Repositories\ProjectRepository;
+use CodeProject\Services\ProjectService;
 use Illuminate\Http\Request;
+use LucaDegasperi\OAuth2Server\Facades\Authorizer;
 
-class ClientController extends Controller
+class ProjectController extends Controller
 {
     /**
-     * @var ClientRepository
+     * @var ProjectRepository
      */
     private $repository;
     /**
-     * @var ClientService
+     * @var ProjectService
      */
     private $service;
 
-    public function __construct(ClientRepository $repository, ClientService $service)
+    public function __construct(ProjectRepository $repository, ProjectService $service)
     {
         $this->repository = $repository;
         $this->service = $service;
@@ -30,8 +31,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-
-        return $this->repository->with(['projects'])->all();
+        return $this->repository->with(['owner','client','notes'])->all();
     }
 
     /**
@@ -53,7 +53,12 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        return $this->repository->with(['projects'])->find($id);
+//        $userId=Authorizer::getResourceOwnerId();
+
+    /*    if ($this->repository->isOwner($id,$userId)){
+            return ['success'=>false];
+        }*/
+        return $this->repository->with(['owner','client'])->find($id);
     }
 
     /**

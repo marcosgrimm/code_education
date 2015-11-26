@@ -14,8 +14,14 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $this->call(ClientTableSeeder::class);
+        /*\CodeProject\Entities\User::truncate();
+        \CodeProject\Entities\Project::truncate();
+        \CodeProject\Entities\Client::truncate();*/
 
+        $this->call(UserTableSeeder::class);
+        $this->call(ClientTableSeeder::class);
+        $this->call(ProjectTableSeeder::class);
+        $this->call(ProjectNoteTableSeeder::class);
 
         Model::reguard();
     }
