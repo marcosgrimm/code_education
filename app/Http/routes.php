@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::post('oauth/access_token', function(){
     return Response::json(Authorizer::issueAccessToken());
 });
@@ -34,6 +35,3 @@ Route::group(['middleware'=>'oauth'], function(){
         Route::delete('/{id}/note/{noteId}', 'ProjectNoteController@delete');
     });
 });
-/*
-
-*/
