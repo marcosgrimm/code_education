@@ -31,7 +31,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return $this->repository->with(['owner','client','notes'])->all();
+        $owner_id = \Authorizer::getResourceOwnerId();
+        return $this->repository->with(['owner','client','notes'])->findWhere(['owner_id'=>$owner_id])->all();
     }
 
     /**
@@ -53,12 +54,12 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-//        $userId=Authorizer::getResourceOwnerId();
 
-    /*    if ($this->repository->isOwner($id,$userId)){
-            return ['success'=>false];
-        }*/
+        if ($this->checkProjectPermission($id) == false){
+            return ['error'=>'access forbidden'];
+        }
         return $this->repository->with(['owner','client'])->find($id);
+
     }
 
     /**
@@ -70,6 +71,11 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        if ($this->checkProjectOwner($id) == false){
+            return ['error'=>'access forbidden'];
+        }
+
         try{
             $this->service->update($request->all(),$id);
         }
@@ -87,6 +93,28 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
+
+        if ($this->checkProjectOwner($id) == false){
+            return ['error'=>'access forbidden'];
+        }
         $this->repository->find($id)->delete();
+    }
+
+    private function checkProjectOwner($project_id){
+        $owner_id = \Authorizer::getResourceOwnerId();
+        return ($this->repository->isOwner($project_id,$owner_id));
+    }
+
+    private function checkProjectMember($project_id){
+        $member_id = \Authorizer::getResourceOwnerId();
+        return ($this->repository->hasMember($project_id,$member_id));
+    }
+
+    private function checkProjectPermission ($project_id){
+        if ($this->checkProjectOwner($project_id) || $this->checkProjectMember($project_id) ){
+            return true;
+        }
+
+        return false;
     }
 }

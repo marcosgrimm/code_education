@@ -55,3 +55,4 @@ $factory->define(CodeProject\Entities\ProjectNote::class, function (Faker\Genera
 
     ];
 });
+
