@@ -65,12 +65,8 @@ class ClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        try{
-            $this->service->update($request->all(),$id);
-        }
-        catch (Exception $e){
-            return 'Erro!';
-        }
+        $this->service->update($request->all(),$id);
+        
         return 'Alterado com sucesso!';
     }
 

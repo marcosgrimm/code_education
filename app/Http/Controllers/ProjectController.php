@@ -71,17 +71,12 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         if ($this->checkProjectOwner($id) == false){
             return ['error'=>'access forbidden'];
         }
 
-        try{
-            $this->service->update($request->all(),$id);
-        }
-        catch (Exception $e){
-            return 'Erro!';
-        }
+        $this->service->update($request->all(),$id);
+        
         return 'Alterado com sucesso!';
     }
 
