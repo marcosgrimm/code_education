@@ -21,6 +21,7 @@ class ProjectController extends Controller
     public function __construct(ProjectRepository $repository, ProjectService $service)
     {
         $this->repository = $repository;
+
         $this->service = $service;
     }
 
@@ -58,6 +59,7 @@ class ProjectController extends Controller
         if ($this->checkProjectPermission($id) == false){
             return ['error'=>'access forbidden'];
         }
+
         return $this->repository->with(['owner','client'])->find($id);
 
     }
@@ -76,7 +78,7 @@ class ProjectController extends Controller
         }
 
         $this->service->update($request->all(),$id);
-        
+
         return 'Alterado com sucesso!';
     }
 
@@ -97,12 +99,12 @@ class ProjectController extends Controller
 
     private function checkProjectOwner($project_id){
         $owner_id = \Authorizer::getResourceOwnerId();
-        return ($this->repository->isOwner($project_id,$owner_id));
+        return ($this->service->isOwner($project_id,$owner_id));
     }
 
     private function checkProjectMember($project_id){
         $member_id = \Authorizer::getResourceOwnerId();
-        return ($this->repository->hasMember($project_id,$member_id));
+        return ($this->service->isMember($project_id,$member_id));
     }
 
     private function checkProjectPermission ($project_id){
@@ -111,5 +113,26 @@ class ProjectController extends Controller
         }
 
         return false;
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function showMembers($id)
+    {
+
+        if ($this->checkProjectPermission($id) == false){
+            return ['error'=>'access forbidden'];
+        }
+
+        $data = ['project_id'=>$id];
+        $container = new \Illuminate\Container\Container();
+        $projectMemberRepository = new \CodeProject\Repositories\ProjectMemberRepositoryEloquent($container);
+        return $projectMemberRepository->findWhere($data);
+
+
     }
 }

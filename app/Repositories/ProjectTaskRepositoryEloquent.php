@@ -11,7 +11,7 @@ use CodeProject\Entities\Project;
  * Class ProjectRepositoryEloquent
  * @package namespace CodeProject\Repositories;
  */
-class ProjectRepositoryEloquent extends BaseRepository implements ProjectRepository
+class ProjectTaskRepositoryEloquent extends BaseRepository implements ProjectTaskRepository
 {
     /**
      * Specify Model class name

@@ -4,7 +4,7 @@ namespace CodeProject\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class CodeProjectRepositoryProvider extends ServiceProvider
+    class CodeProjectRepositoryProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -31,5 +31,8 @@ class CodeProjectRepositoryProvider extends ServiceProvider
 
         $this->app->bind(\CodeProject\Repositories\ProjectNoteRepository::class,
             \CodeProject\Repositories\ProjectNoteRepositoryEloquent::class   );
+
+        $this->app->bind(\CodeProject\Repositories\ProjectMemberRepository::class,
+            \CodeProject\Repositories\ProjectMemberRepositoryEloquent::class   );
     }
 }
