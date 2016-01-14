@@ -12,7 +12,7 @@ class CreateTableProjectTask extends Migration
      */
     public function up()
     {
-        Schema::create('project_task', function (Blueprint $table) {
+        /*Schema::create('project_task', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->date('start_date');
@@ -21,7 +21,7 @@ class CreateTableProjectTask extends Migration
             $table->integer('project_id')->unsigned();
             $table->foreign('project_id')->references('id')->on('projects');
             $table->timestamps();
-        });
+        });*/
     }
 
     /**
@@ -31,6 +31,6 @@ class CreateTableProjectTask extends Migration
      */
     public function down()
     {
-        Schema::drop('project_task');
+       // Schema::drop('project_task');
     }
 }

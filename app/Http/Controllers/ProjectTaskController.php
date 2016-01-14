@@ -2,8 +2,8 @@
 
 namespace CodeProject\Http\Controllers;
 
-use CodeProject\Repositories\ProjectNoteRepository;
-use CodeProject\Services\ProjectNoteService;
+use CodeProject\Repositories\ProjectTaskRepository;
+use CodeProject\Services\ProjectTaskService;
 use Illuminate\Http\Request;
 
 class ProjectTaskController extends Controller
@@ -51,9 +51,9 @@ class ProjectTaskController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id,$noteId)
+    public function show($id,$taskId)
     {
-        return $this->repository->findWhere(['project_id'=>$id, 'id'=>$noteId]);
+        return $this->repository->findWhere(['project_id'=>$id, 'id'=>$taskId]);
     }
 
     /**
@@ -63,10 +63,10 @@ class ProjectTaskController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id,$noteId)
+    public function update(Request $request, $id,$taskId)
     {
         try{
-            $this->service->update($request->all(),$noteId);
+            $this->service->update($request->all(),$taskId);
         }
         catch (Exception $e){
             return 'Erro!';
@@ -80,8 +80,8 @@ class ProjectTaskController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function destroy($id,$noteId)
+    public function destroy($id,$taskId)
     {
-        $this->repository->find($noteId)->delete();
+        $this->repository->find($taskId)->delete();
     }
 }

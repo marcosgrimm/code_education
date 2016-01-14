@@ -34,5 +34,9 @@ use Illuminate\Support\ServiceProvider;
 
         $this->app->bind(\CodeProject\Repositories\ProjectMemberRepository::class,
             \CodeProject\Repositories\ProjectMemberRepositoryEloquent::class   );
+
+        $this->app->bind(\CodeProject\Repositories\ProjectTaskRepository::class,
+            \CodeProject\Repositories\ProjectTaskRepositoryEloquent::class   );
+
     }
 }

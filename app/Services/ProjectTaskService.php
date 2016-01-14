@@ -9,15 +9,15 @@
 namespace CodeProject\Services;
 
 
-use CodeProject\Repositories\ProjectNoteRepository;
-use CodeProject\Validators\ProjectNoteValidator;
+use CodeProject\Repositories\ProjectTaskRepository;
+use CodeProject\Validators\ProjectTaskValidator;
 use Prettus\Validator\Exceptions\ValidatorException;
 
 class ProjectTaskService
 {
 
     /**
-     * @var ProjectNoteRepository
+     * @var ProjectTaskRepository
      */
     protected $repository;
     /**

@@ -4,8 +4,8 @@ namespace CodeProject\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use CodeProject\Repositories\ProjectRepository;
-use CodeProject\Entities\Project;
+use CodeProject\Repositories\ProjectTaskRepository;
+use CodeProject\Entities\ProjectTask;
 
 /**
  * Class ProjectRepositoryEloquent
@@ -20,7 +20,7 @@ class ProjectTaskRepositoryEloquent extends BaseRepository implements ProjectTas
      */
     public function model()
     {
-        return Project::class;
+        return ProjectTask::class;
     }
 
     /**
