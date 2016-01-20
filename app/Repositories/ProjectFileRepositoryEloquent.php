@@ -4,15 +4,14 @@ namespace CodeProject\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use CodeProject\Repositories\ProjectRepository;
-use CodeProject\Entities\Project;
-use CodeProject\Presenters\ProjectPresenter;
+use CodeProject\Repositories\ProjectFileRepository;
+use CodeProject\Entities\ProjectFile;
 
 /**
  * Class ProjectRepositoryEloquent
  * @package namespace CodeProject\Repositories;
  */
-class ProjectRepositoryEloquent extends BaseRepository implements ProjectRepository
+class ProjectFileRepositoryEloquent extends BaseRepository implements ProjectFileRepository
 {
     /**
      * Specify Model class name
@@ -21,7 +20,7 @@ class ProjectRepositoryEloquent extends BaseRepository implements ProjectReposit
      */
     public function model()
     {
-        return Project::class;
+        return ProjectFile::class;
     }
 
     /**
@@ -32,8 +31,4 @@ class ProjectRepositoryEloquent extends BaseRepository implements ProjectReposit
         $this->pushCriteria(app(RequestCriteria::class));
     }
 
-    public function presenter()
-    {
-        return ProjectPresenter::class;
-    }
 }

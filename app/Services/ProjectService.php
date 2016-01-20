@@ -13,7 +13,10 @@ use CodeProject\Entities\ProjectMember;
 use CodeProject\Repositories\ProjectMemberRepositoryEloquent;
 use CodeProject\Repositories\ProjectRepository;
 use CodeProject\Validators\ProjectValidator;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Contracts\Filesystem\Factory;
 use Prettus\Validator\Exceptions\ValidatorException;
+
 
 class ProjectService
 {
@@ -26,12 +29,22 @@ class ProjectService
      * @var ProjectValidator
      */
     private $validator;
+    /**
+     * @var Filesystem
+     */
+    private $filesystem;
+    /**
+     * @var Factory
+     */
+    private $factory;
 
-    public function __construct(ProjectRepository $repository, ProjectValidator $validator)
+    public function __construct(ProjectRepository $repository, ProjectValidator $validator, Filesystem $filesystem, Factory $factory)
     {
 
         $this->repository = $repository;
         $this->validator = $validator;
+        $this->filesystem = $filesystem;
+        $this->factory = $factory;
     }
 
     public function create(array $data){
@@ -118,4 +131,18 @@ class ProjectService
         return false;
     }
 
+    public function createFile(array $data){
+        // name, description, extension, file
+        $file = $data['file'];
+        $project = $this->repository->skipPresenter()->find($data['project_id']);
+        $projectFile = $project->files()->create($data);
+        $this->factory->put($projectFile->id.'.'.$data['extension'], $this->filesystem->get($file));
+    }
+
+
+    public function deleteFile($id,$projectFileRepository){
+        $projectFile = $projectFileRepository->skipPresenter()->find($id);
+        $this->factory->delete($projectFile->id.'.'.$projectFile->extension);
+        $projectFileRepository->skipPresenter()->find($id)->delete();
+    }
 }
