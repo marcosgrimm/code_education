@@ -12,10 +12,12 @@ namespace CodeProject\Services;
 use CodeProject\Entities\ProjectMember;
 use CodeProject\Repositories\ProjectMemberRepositoryEloquent;
 use CodeProject\Repositories\ProjectRepository;
+use CodeProject\Validators\ProjectFileValidator;
 use CodeProject\Validators\ProjectValidator;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Contracts\Filesystem\Factory;
 use Prettus\Validator\Exceptions\ValidatorException;
+use CodeProject\Http\Requests\Request as Request;
 
 
 class ProjectService
@@ -37,14 +39,21 @@ class ProjectService
      * @var Factory
      */
     private $factory;
+    /**
+     * @var ProjectFileValidator
+     */
+    private $projectFileValidator;
 
-    public function __construct(ProjectRepository $repository, ProjectValidator $validator, Filesystem $filesystem, Factory $factory)
+
+    public function __construct(ProjectRepository $repository, ProjectValidator $validator, Filesystem $filesystem, Factory $factory, ProjectFileValidator $projectFileValidator)
     {
 
         $this->repository = $repository;
         $this->validator = $validator;
+
         $this->filesystem = $filesystem;
         $this->factory = $factory;
+        $this->projectFileValidator = $projectFileValidator;
     }
 
     public function create(array $data){
@@ -131,18 +140,50 @@ class ProjectService
         return false;
     }
 
-    public function createFile(array $data){
+    public function createFile( $request){
         // name, description, extension, file
-        $file = $data['file'];
-        $project = $this->repository->skipPresenter()->find($data['project_id']);
-        $projectFile = $project->files()->create($data);
-        $this->factory->put($projectFile->id.'.'.$data['extension'], $this->filesystem->get($file));
+        try
+        {
+            $this->projectFileValidator->with($request->all())->passesOrFail();
+
+            $file = $request->file('file');
+            $data['file']=$file;
+            $arFile = explode('.',$file->getClientOriginalName());
+
+            $data['name']=$arFile[0];
+            $data['extension']=$arFile[1];
+            $data['project_id']= $request->project_id;
+            $data['description']= $request->description;
+
+            $project = $this->repository->skipPresenter()->find($data['project_id']);
+            $projectFile = $project->files()->create($data);
+            $this->factory->put($projectFile->id.'.'.$data['extension'], $this->filesystem->get($file));
+            return $projectFile;
+        }catch (ValidatorException $e){
+
+            return [
+                'error'=>true,
+                'message'=>$e->getMessageBag()
+            ];
+        }
     }
 
-
     public function deleteFile($id,$projectFileRepository){
-        $projectFile = $projectFileRepository->skipPresenter()->find($id);
-        $this->factory->delete($projectFile->id.'.'.$projectFile->extension);
-        $projectFileRepository->skipPresenter()->find($id)->delete();
+        try
+        {
+            if (empty($id)){
+                trigger_error('Sem Id');
+            }
+            $projectFile = $projectFileRepository->skipPresenter()->find($id);
+            $this->factory->delete($projectFile->id.'.'.$projectFile->extension);
+            $projectFileRepository->skipPresenter()->find($id)->delete();
+            return 'Excluido com sucesso';
+        }catch (Exception $e){
+            return [
+                'error'=>true,
+                'message'=>'É necessário um ID para fazer a exclusão'
+            ];
+        }
+
     }
 }

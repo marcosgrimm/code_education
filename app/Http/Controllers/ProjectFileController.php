@@ -32,15 +32,7 @@ class ProjectFileController extends Controller
      */
     public function store(Request $request)
     {
-        $file = $request->file('file');
-        $data['file']=$file;
-        $arFile = explode('.',$file->getClientOriginalName());
-        $data['name']=$arFile[0];
-        $data['extension']=$arFile[1];
-        $data['project_id']= $request->project_id;
-        $data['description']= $request->description;
-
-        $this->service->createFile($data);
+        return $this->service->createFile($request);
 
     }
 
@@ -53,7 +45,7 @@ class ProjectFileController extends Controller
     public function destroy($project_id,$id)
     {
 
-        $this->service->deleteFile($id,$this->repository);
+        return $this->service->deleteFile($id,$this->repository);
 
     }
 
