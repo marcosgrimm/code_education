@@ -150,14 +150,14 @@ class ProjectService
             $data['file']=$file;
             $arFile = explode('.',$file->getClientOriginalName());
 
-            $data['name']=$arFile[0];
+            $data['name']=$request->name;
             $data['extension']=$arFile[1];
             $data['project_id']= $request->project_id;
             $data['description']= $request->description;
 
             $project = $this->repository->skipPresenter()->find($projectId);
             $projectFile = $project->files()->create($data);
-            $this->factory->put($projectFile->id.'.'.$data['extension'], $this->filesystem->get($file));
+            $this->factory->put($projectFile->name.'.'.$data['extension'], $this->filesystem->get($file));
             return $projectFile;
         }catch (ValidatorException $e){
 
@@ -175,7 +175,7 @@ class ProjectService
                 trigger_error('Sem Id');
             }
             $projectFile = $projectFileRepository->skipPresenter()->find($id);
-            $this->factory->delete($projectFile->id.'.'.$projectFile->extension);
+            $this->factory->delete($projectFile->name.'.'.$projectFile->extension);
             $projectFileRepository->skipPresenter()->find($id)->delete();
             return 'Excluido com sucesso';
         }catch (Exception $e){
