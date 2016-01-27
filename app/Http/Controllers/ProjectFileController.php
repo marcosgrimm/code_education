@@ -30,9 +30,9 @@ class ProjectFileController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
-        return $this->service->createFile($request);
+        return $this->service->createFile($request,$id);
 
     }
 

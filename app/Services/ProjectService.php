@@ -140,7 +140,7 @@ class ProjectService
         return false;
     }
 
-    public function createFile( $request){
+    public function createFile( $request,$projectId){
         // name, description, extension, file
         try
         {
@@ -155,7 +155,7 @@ class ProjectService
             $data['project_id']= $request->project_id;
             $data['description']= $request->description;
 
-            $project = $this->repository->skipPresenter()->find($data['project_id']);
+            $project = $this->repository->skipPresenter()->find($projectId);
             $projectFile = $project->files()->create($data);
             $this->factory->put($projectFile->id.'.'.$data['extension'], $this->filesystem->get($file));
             return $projectFile;

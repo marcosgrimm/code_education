@@ -16,7 +16,7 @@ class ProjectFileValidator extends LaravelValidator
     protected $rules = [
         'name' => 'required',
         'description' => 'required|string',
-
+        'file' => 'required'
     ];
 
 }
