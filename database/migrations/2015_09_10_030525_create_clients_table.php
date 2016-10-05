@@ -21,6 +21,7 @@ class CreateClientsTable extends Migration
             $table->text('address');
             $table->text('obs');
             $table->timestamps();
+
         });
     }
 
