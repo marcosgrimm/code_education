@@ -57,10 +57,10 @@ class ProjectController extends Controller
     public function show($id)
     {
 
-        if ($this->checkProjectPermission($id) == false){
+       /* if ($this->checkProjectPermission($id) == false){
             return ['error'=>'access forbidden'];
-        }
-
+        }*/
+        return $this->repository->skipPresenter()->find($id);
         return $this->repository->with(['owner','client'])->find($id);
 
     }
