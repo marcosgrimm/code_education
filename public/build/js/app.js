@@ -28,15 +28,15 @@ app.config(['$routeProvider','OAuthProvider','OAuthTokenProvider','appConfigProv
         })
         .when('/clients',{
             templateUrl:'build/views/client/listAll.html',
-            controller:'ClientsListController'
-        })
-        .when('/client/:id',{
-            templateUrl:'build/views/client/list.html',
-            controller:'ClientListController'
+            controller:'ClientsListControllerAll'
         })
         .when('/client/new',{
             templateUrl:'build/views/client/new.html',
             controller:'ClientNewController'
+        })
+        .when('/client/:id',{
+            templateUrl:'build/views/client/list.html',
+            controller:'ClientListController'
         })
         .when('/client/:id/edit',{
             templateUrl:'build/views/client/edit.html',
@@ -46,11 +46,27 @@ app.config(['$routeProvider','OAuthProvider','OAuthTokenProvider','appConfigProv
             templateUrl:'build/views/client/remove.html',
             controller:'ClientRemoveController'
         })
+        .when('/project/:id/notes',{
+            templateUrl:'build/views/projectNote/listAll.html',
+            controller:'ProjectNoteListAllController'
+        })
+        .when('/project/:id/note/new',{
+            templateUrl:'build/views/projectNote/new.html',
+            controller:'ProjectNoteNewController'
+        })
         .when('/project/:id/note/:noteId',{
             templateUrl:'build/views/projectNote/list.html',
             controller:'ProjectNoteListController'
         })
-        ;
+        .when('/project/:id/note/:noteId/edit',{
+            templateUrl:'build/views/projectNote/edit.html',
+            controller:'ProjectNoteEditController'
+        })
+        .when('/project/:id/note/:noteId/remove',{
+            templateUrl:'build/views/projectNote/remove.html',
+            controller:'ProjectNoteRemoveController'
+        });
+
         OAuthProvider.configure({
             baseUrl: appConfigProvider.config.baseUrl,
             clientId: 'appid1',

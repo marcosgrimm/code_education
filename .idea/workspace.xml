@@ -2,16 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee8a38c5-cf9d-4ef1-9a94-3a89788f6676" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/build/css/all-0bb6111c.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/build/css/all.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/build/js/all-a8d2a406.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/build/js/all.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/build/rev-manifest.json" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/laravel.iml" afterPath="$PROJECT_DIR$/.idea/laravel.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/app.js" afterPath="$PROJECT_DIR$/public/build/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/client/clientListAll.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/client/clientListAll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/projectNote/projectNoteEdit.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/projectNote/projectNoteEdit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/projectNote/projectNoteListAll.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/projectNote/projectNoteListAll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/projectNote/projectNoteNew.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/projectNote/projectNoteNew.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/projectNote/projectNoteRemove.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/projectNote/projectNoteRemove.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/services/projectNote.js" afterPath="$PROJECT_DIR$/public/build/js/services/projectNote.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/client/listAll.html" afterPath="$PROJECT_DIR$/public/build/views/client/listAll.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/client/new.html" afterPath="$PROJECT_DIR$/public/build/views/client/new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/projectNote/edit.html" afterPath="$PROJECT_DIR$/public/build/views/projectNote/edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/projectNote/list.html" afterPath="$PROJECT_DIR$/public/build/views/projectNote/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/projectNote/listAll.html" afterPath="$PROJECT_DIR$/public/build/views/projectNote/listAll.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/projectNote/new.html" afterPath="$PROJECT_DIR$/public/build/views/projectNote/new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/projectNote/remove.html" afterPath="$PROJECT_DIR$/public/build/views/projectNote/remove.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app.js" afterPath="$PROJECT_DIR$/resources/assets/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/client/clientListAll.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/client/clientListAll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteEdit.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteEdit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteListAll.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteListAll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteNew.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteNew.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteRemove.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteRemove.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/services/projectNote.js" afterPath="$PROJECT_DIR$/resources/assets/js/services/projectNote.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/client/listAll.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/client/listAll.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/client/new.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/client/new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/projectNote/edit.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/projectNote/edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/projectNote/list.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/projectNote/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/projectNote/listAll.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/projectNote/listAll.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/projectNote/new.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/projectNote/new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/projectNote/remove.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/projectNote/remove.html" />
     </list>
     <ignored path="laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,81 +60,69 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="22" />
+            <state relative-caret-position="242">
+              <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectNote/list.html">
+      <file leaf-file-name="projectNoteNew.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteNew.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+            <state relative-caret-position="220">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projectNoteList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteList.js">
+      <file leaf-file-name="projectNote.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/services/projectNote.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="176">
+              <caret line="8" column="111" lean-forward="false" selection-start-line="8" selection-start-column="111" selection-end-line="8" selection-end-column="111" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="84" column="52" lean-forward="false" selection-start-line="84" selection-start-column="52" selection-end-line="84" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/services/project.js">
+      <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/services/client.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <file leaf-file-name="clientListAll.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientListAll.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+            <state relative-caret-position="22">
+              <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
+      <file leaf-file-name="new.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectNote/new.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="51" />
+              <caret line="11" column="116" lean-forward="false" selection-start-line="11" selection-start-column="116" selection-end-line="11" selection-end-column="116" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectNoteController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectNoteController.php">
+      <file leaf-file-name="projectNoteListAll.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteListAll.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="55" column="51" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
-              <folding>
-                <element signature="e#48#99#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="22">
+              <caret line="1" column="95" lean-forward="false" selection-start-line="1" selection-start-column="95" selection-end-line="1" selection-end-column="95" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,6 +136,9 @@
       <find>client</find>
       <find>Client</find>
       <find>$get</find>
+      <find>phone</find>
+      <find>delete</find>
+      <find>respons</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;table class=&quot;table&quot;&gt;                             &lt;tr&gt;                                 &lt;th&gt;</replace>
@@ -139,14 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2016_01_15_011939_create_table_project_files.php" />
-        <option value="$PROJECT_DIR$/app/Entities/ProjectFile.php" />
-        <option value="$PROJECT_DIR$/app/Entities/Project.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_01_16_004110_add_project_id_in_project_files.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/ProjectFileRepository.php" />
-        <option value="$PROJECT_DIR$/app/Providers/CodeProjectRepositoryProvider.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/ProjectFileRepositoryEloquent.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php" />
         <option value="$PROJECT_DIR$/app/Validators/ProjectFileValidator.php" />
         <option value="$PROJECT_DIR$/app/Services/ProjectService.php" />
@@ -160,8 +165,6 @@
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/home.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/views/login.html" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/login.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/views/client/new.html" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/client/clientNew.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/views/client/edit.html" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/client/clientEdit.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/client/clientRemove.js" />
@@ -175,21 +178,31 @@
         <option value="$PROJECT_DIR$/public/build/js/controllers/client/clientList.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/client/clientListClient.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/views/client/listClient.html" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/client/clientListAll.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/client/clientList.js" />
         <option value="$PROJECT_DIR$/public/js/all.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/views/client/listAll.html" />
         <option value="$PROJECT_DIR$/resources/assets/js/views/client/list.html" />
         <option value="$PROJECT_DIR$/resources/assets/js/services/client.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/services/projectNote.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/services/project.js" />
         <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/views/projectNote/list.html" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteList.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectNoteController.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/client/clientListAll.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteList.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/projectNote/edit.html" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/projectNote/remove.html" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteEdit.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteRemove.js" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/projectNote/listAll.html" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/projectNote/list.html" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/client/clientNew.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/client/new.html" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/client/listAll.html" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/projectNote/new.html" />
+        <option value="$PROJECT_DIR$/resources/assets/js/services/projectNote.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteListAll.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteNew.js" />
       </list>
     </option>
   </component>
@@ -782,12 +795,14 @@
       <workItem from="1485827037393" duration="1387000" />
       <workItem from="1485909345085" duration="7995000" />
       <workItem from="1485994328221" duration="1897000" />
-      <workItem from="1486079715629" duration="10982000" />
+      <workItem from="1486079715629" duration="11267000" />
+      <workItem from="1486596971961" duration="8410000" />
+      <workItem from="1486686886124" duration="3722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22261000" />
+    <option name="totallyTimeSpent" value="34678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -798,7 +813,6 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -811,6 +825,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -836,83 +851,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/client/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="30" column="71" lean-forward="false" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/client/remove.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientRemove.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/oauth2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lucadegasperi/oauth2-server-laravel/config/oauth2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2464">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lucadegasperi/oauth2-server-laravel/src/Exceptions/NoActiveAccessTokenException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/OAuth/PasswordGrantVerifier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-484">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/lucadegasperi/oauth2-server-laravel/src/Middleware/OAuthExceptionHandlerMiddleware.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/league/oauth2-server/src/ResourceServer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/lucadegasperi/oauth2-server-laravel/src/Authorizer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -924,7 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1342">
           <caret line="70" column="6" lean-forward="false" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,7 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -941,7 +877,6 @@
         <state relative-caret-position="44">
           <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -949,7 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,26 +898,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1485826381642" expanded="true" signature="0:411" ph="&lt;IfModule mod_rewrite.c&gt;" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/build/js/teste" />
-    <entry file="file://$PROJECT_DIR$/public/build/css/all-0bb6111c.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24938">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/css/all-0bb6111c.css" />
     <entry file="file://$PROJECT_DIR$/public/build/js/controllers/client/clientList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -991,7 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -999,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="69" column="3" lean-forward="false" selection-start-line="69" selection-start-column="3" selection-end-line="69" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,23 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="27" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientEdit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientListAll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="38" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,31 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-364">
           <caret line="353" column="11" lean-forward="false" selection-start-line="353" selection-start-column="11" selection-end-line="353" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteEdit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectNote/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/client/listAll.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1071,35 +950,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Entities/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Entities/ProjectNote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1115,27 +969,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/projectNote.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/prettus/l5-repository/src/Prettus/Repository/Contracts/RepositoryInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1147,10 +984,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectNote/list.html">
+    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectNoteRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        <state relative-caret-position="220">
+          <caret line="10" column="50" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1298">
+          <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1159,15 +1017,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="84" column="52" lean-forward="false" selection-start-line="84" selection-start-column="52" selection-end-line="84" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectNoteRepository.php">
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="50" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding />
+        <state relative-caret-position="88">
+          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -1179,53 +1035,192 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientEdit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectNote/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-79">
+          <caret line="7" column="47" lean-forward="false" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientRemove.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/client/remove.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectNote/remove.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="66" lean-forward="false" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectNoteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1760">
+          <caret line="82" column="27" lean-forward="false" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteRemove.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="154">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectRepository.php">
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectNote/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteEdit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Entities/ProjectNote.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="62" column="34" lean-forward="false" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="51" />
+          <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectNoteController.php">
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/client/listAll.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="55" column="51" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
-          <folding>
-            <element signature="e#48#99#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectNote/listAll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/client/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="68" column="74" lean-forward="false" selection-start-line="68" selection-start-column="74" selection-end-line="68" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientNew.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/projectNote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="111" lean-forward="false" selection-start-line="8" selection-start-column="111" selection-end-line="8" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="35" column="75" lean-forward="false" selection-start-line="35" selection-start-column="75" selection-end-line="35" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientListAll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteNew.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectNote/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="116" lean-forward="false" selection-start-line="11" selection-start-column="116" selection-end-line="11" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteListAll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="95" lean-forward="false" selection-start-line="1" selection-start-column="95" selection-end-line="1" selection-end-column="95" />
+          <folding />
         </state>
       </provider>
     </entry>

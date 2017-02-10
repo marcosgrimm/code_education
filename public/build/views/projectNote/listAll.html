@@ -2,28 +2,32 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Listagem de clientes</div>
+                <div class="panel-heading">
+                    Listagem de Notas de Projeto: {{project.name}}
+                    <span class="pull-right">
+                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{project.id}}/note/new">Adicionar Nota</a></button>
+
+                    </span>
+                </div>
                 <div class="panel-body">
                    <table class="table">
                        <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Responsible</th>
-                            <th>E-Mail</th>
-                            <th>Phone</th>
-                            <th>Ação</th>
+                            <th class="col-md-1">Título</th>
+                            <th class="col-md-8">Nota</th>
+                            <th class="col-md-2">Ação</th>
                         </tr>
                        </thead>
                        <tbody>
-                            <tr ng-repeat="client in clients">
-                                <td>{{client.name}}</td>
-                                <td>{{client.responsible}}</td>
-                                <td>{{client.email}}</td>
-                                <td>{{client.phone}}</td>
+                            <tr ng-repeat="projectNote in projectNotes">
+                                <td>{{projectNote.title}}</td>
+                                <td>{{projectNote.note}}</td>
                                 <td>
-                                    <a ng-href="#/clients/{{client.id}}/edit">Editar</a> |
-                                    <a ng-href="#/clients/{{client.id}}/remove">Exluir</a> |
-                                    <a ng-href="#/client/{{client.id}}">Detalhar</a>
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{projectNote.project_id}}/note/{{projectNote.id}}/edit">Editar</a> </button>
+                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{projectNote.project_id}}/note/{{projectNote.id}}/remove">Excluir</a></button>
+                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{projectNote.project_id}}/note/{{projectNote.id}}">Detalhar</a></button>
+                                    </div>
                                 </td>
                             </tr>
                        </tbody>

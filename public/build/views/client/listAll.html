@@ -2,7 +2,14 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Listagem de clientes</div>
+                <div class="panel-heading">Listagem de clientes
+
+                    <span class="pull-right">
+                        <button type="button" class="btn btn-default  btn-xs ">
+                            <a ng-href="#/client/new">Adicionar Client</a>
+                        </button>
+                    </span>
+                </div>
                 <div class="panel-body">
                    <table class="table">
                        <thead>
@@ -21,9 +28,17 @@
                                 <td>{{client.email}}</td>
                                 <td>{{client.phone}}</td>
                                 <td>
-                                    <a ng-href="#/clients/{{client.id}}/edit">Editar</a> |
-                                    <a ng-href="#/clients/{{client.id}}/remove">Exluir</a> |
-                                    <a ng-href="#/client/{{client.id}}">Detalhar</a>
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button type="button" class="btn btn-default  btn-xs ">
+                                            <a ng-href="#/client/{{client.id}}/edit">Editar</a>
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-xs ">
+                                            <a ng-href="#/client/{{client.id}}/remove">Exluir</a>
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-xs ">
+                                            <a ng-href="#/client/{{client.id}}">Detalhar</a>
+                                        </button>
+                                    </div>
                                 </td>
                             </tr>
                        </tbody>
