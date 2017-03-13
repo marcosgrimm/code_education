@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Visualização de Nota de Projeto
+
+                    <span class="pull-right">
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{project.project_id}}/edit">Editar</a> </button>
+                            <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{project.project_id}}/remove">Excluir</a></button>
+                            <button type="button" class="btn btn-default btn-xs "><a ng-href="#/projects">Listagem</a></button>
+                        </div>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <div class="row col-md-8 col-md-offset-2 ">
+
+                        <table class="table">
+                            <tr>
+                                <th>Nome</th>
+                                <td>{{project.name}}</td>
+                            </tr>
+                            <tr>
+                                <th>Proprietário</th>
+                                <td>{{project.owner_id}}</td>
+                            </tr>
+                            <tr>
+                                <th>Descrição</th>
+                                <td>{{project.client_id}}</td>
+                            </tr>
+                            <tr>
+                                <th>Descrição</th>
+                                <td>{{project.description}}</td>
+                            </tr>
+                            <tr>
+                                <th>Progresso</th>
+                                <td>{{project.progress}}%</td>
+                            </tr>
+                            <tr>
+                                <th>Status</th>
+                                <td>{{project.status}}</td>
+                            </tr>
+                            <tr>
+                                <th>Prazo</th>
+                                <td>{{project.due_date}}</td>
+                            </tr>
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

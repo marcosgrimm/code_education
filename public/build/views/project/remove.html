@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Exclusão de Projeto</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <p class="lead text-danger">Desejar realmente excluir este projeto?</p>
+                        <ul>
+                           <li>
+                                <strong>Nome</strong>
+                                : {{project.name}}:
+                            </li>
+                            <li>
+                                <strong>Proprietário</strong>
+                                : {{project.owner_id}}:
+                            </li>
+                            <li>
+                                <strong>Descrição</strong>
+                                : {{project.client_id}}:
+                            </li>
+                            <li>
+                                <strong>Descrição</strong>
+                                : {{project.description}}:
+                            </li>
+                            <li>
+                                <strong>Progresso</strong>
+                                : {{project.progress}}%:
+                            </li>
+                            <li>
+                                <strong>Status</strong>
+                                : {{project.status}}:
+                            </li>
+                            <li>
+                                <strong>Prazo</strong>
+                                : {{project.due_date}}:
+                            </li>
+                        </ul>
+                        <div class="col-md-6 col-md-offset-4">
+                            <button type="button" class="btn btn-danger" ng-click="remove()">
+                                Excluir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

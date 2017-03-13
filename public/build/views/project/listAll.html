@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Listagem de Projetos
+                    <span class="pull-right">
+                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/new">Adicionar Projeto</a></button>
+
+                    </span>
+                </div>
+                <div class="panel-body">
+                   <table class="table">
+                       <thead>
+                        <tr>
+                            <th>Nr.</th>
+                            <th class="col-md-1">Proprietário</th>
+                            <th class="col-md-1">Cliente</th>
+                            <th class="col-md-2">Nome</th>
+                            <th class="col-md-3">Descrição</th>
+                            <th class="col-md-1">Progresso</th>
+                            <th class="col-md-1">Status</th>
+                            <th class="col-md-1">Prazo</th>
+                            <th class="col-md-2"></th>
+                        </tr>
+                       </thead>
+                       <tbody>
+                            <tr ng-repeat="project  in projects  track by $index">
+                                <th>{{$index+1}}</th>
+                                <td>{{project.owner_id}}</td>
+                                <td>{{project.client_id}}</td>
+                                <td>{{project.name}}</td>
+                                <td>{{project.description}}</td>
+                                <td>{{project.progress}}%</td>
+                                <td>{{project.status}}</td>
+                                <td>{{project.due_date}}</td>
+                                <td class="text-center">
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{project.project_id}}/edit">Editar</a> </button>
+                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{project.project_id}}/remove">Excluir</a></button>
+                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{project.project_id}}">Detalhar</a></button>
+                                    </div>
+                                </td>
+                            </tr>
+                       </tbody>
+                   </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

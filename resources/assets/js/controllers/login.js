@@ -1,6 +1,6 @@
 
 angular.module('app.controllers')
-    .controller('LoginController',['$scope','$location','OAuth',function($scope,$location,OAuth){
+    .controller('LoginController',['$scope','$location','$cookies','User','OAuth',function($scope,$location,$cookies,User,OAuth){
         //console.log($scope.user);
 
         $scope.user = {
@@ -12,22 +12,22 @@ angular.module('app.controllers')
             message:'',
             error:false
         }
-    $scope.login = function(){
-        if ($scope.form.$valid){
+        $scope.login = function(){
+            if ($scope.form.$valid){
+                OAuth.getAccessToken($scope.user).then(function(){
+                        User.authenticated({},{},function(data){
+                            $cookies.putObject('user',data);
+                            $location.path('home');
+                        });
 
-
-        OAuth.getAccessToken($scope.user).then(
-            //sucesso
-            function(){
-                $location.path('home');
-            },
-            //falha
-            function (data){
-                $scope.error.error=true;
-                console.log(data);
-                $scope.error.message= data.data.error_description ;
+                    },
+                    function (data){
+                        $scope.error.error=true;
+                        //console.log(data);
+                        $scope.error.message= data.data.error_description ;
+                    }
+                );
             }
-        );}
-    };
+        };
 
-}]);
+    }]);

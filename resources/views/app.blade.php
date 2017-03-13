@@ -5,8 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Laravel</title>
+
 	@if(Config::get('app.debug'))
-		<link href="{{asset('build/css/vendor/bootstrap.min.css')}}" rel="stylesheet"/>
+		<link href="{{asset('build/css/app.css')}}" rel="stylesheet"/>
+		<link href="{{asset('build/css/components.css')}}" rel="stylesheet"/>
+		<link href="{{asset('build/css/flaticon.css')}}" rel="stylesheet"/>
+		<link href="{{asset('build/css/font-awesome.css')}}" rel="stylesheet"/>
 		<link href="{{asset('build/css/vendor/bootstrap-theme.min.css')}}" rel="stylesheet"/>
 	@else
 		<link href="{{elixir('css/all.css')}}" rel="stylesheet"/>
@@ -83,6 +87,7 @@
 		<script src="{{asset('build/js/services/client.js')}}"></script>
 		<script src="{{asset('build/js/services/projectNote.js')}}"></script>
 		<script src="{{asset('build/js/services/project.js')}}"></script>
+		<script src="{{asset('build/js/services/user.js')}}"></script>
 
 
 		<!-- CONTROLLERS !-->
@@ -100,6 +105,12 @@
 		<script src="{{asset('build/js/controllers/projectNote/projectNoteNew.js')}}"></script>
 		<script src="{{asset('build/js/controllers/projectNote/projectNoteEdit.js')}}"></script>
 		<script src="{{asset('build/js/controllers/projectNote/projectNoteRemove.js')}}"></script>
+
+		<script src="{{asset('build/js/controllers/project/projectList.js')}}"></script>
+		<script src="{{asset('build/js/controllers/project/projectListAll.js')}}"></script>
+		<script src="{{asset('build/js/controllers/project/projectNew.js')}}"></script>
+		<script src="{{asset('build/js/controllers/project/projectEdit.js')}}"></script>
+		<script src="{{asset('build/js/controllers/project/projectRemove.js')}}"></script>
 	@else
 		<script src="{{elixir('js/all.js')}}"></script>
 	@endif

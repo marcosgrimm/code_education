@@ -492,7 +492,7 @@ f+" > 4096 bytes)!");k.cookie=e}}c.module("ngCookies",["ng"]).provider("$cookies
 })();
 
 !function(e,t){"function"==typeof define&&define.amd?define(["angular","angular-cookies","query-string"],t):"object"==typeof exports?module.exports=t(require("angular"),require("angular-cookies"),require("query-string")):e.angularOAuth2=t(e.angular,"ngCookies",e.queryString)}(this,function(e,t,n){function r(e,t,n){return{request:function(e){return e.headers=e.headers||{},!e.headers.hasOwnProperty("Authorization")&&n.getAuthorizationHeader()&&(e.headers.Authorization=n.getAuthorizationHeader()),e},responseError:function(r){return 400!==r.status||!r.data||"invalid_request"!==r.data.error&&"invalid_grant"!==r.data.error||(n.removeToken(),t.$emit("oauth:error",r)),(401===r.status&&r.data&&"invalid_token"===r.data.error||r.headers("www-authenticate")&&0===r.headers("www-authenticate").indexOf("Bearer"))&&t.$emit("oauth:error",r),e.reject(r)}}}function o(e){e.interceptors.push("oauthInterceptor")}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function a(){var t=this,r=function(t){if(!(t instanceof Object))throw new TypeError("Invalid argument: `config` must be an `Object`.");var n=e.extend({},f,t);return e.forEach(h,function(e){if(!n[e])throw new Error("Missing parameter: "+e+".")}),"/"===n.baseUrl.substr(-1)&&(n.baseUrl=n.baseUrl.slice(0,-1)),"/"!==n.grantPath[0]&&(n.grantPath="/"+n.grantPath),"/"!==n.revokePath[0]&&(n.revokePath="/"+n.revokePath),n};this.configure=function(e){t.defaultConfig=r(e)},this.$get=function(t,o){var a=function(){function a(e){i(this,a),this.config=e}return s(a,[{key:"configure",value:function(e){this.config=r(e)}},{key:"isAuthenticated",value:function(){return!!o.getToken()}},{key:"getAccessToken",value:function(r,i){return r=e.extend({client_id:this.config.clientId,grant_type:"password"},r),null!==this.config.clientSecret&&(r.client_secret=this.config.clientSecret),r=n.stringify(r),i=e.extend({headers:{Authorization:void 0,"Content-Type":"application/x-www-form-urlencoded"}},i),t.post(""+this.config.baseUrl+this.config.grantPath,r,i).then(function(e){return o.setToken(e.data),e})}},{key:"getRefreshToken",value:function(r,i){return r=e.extend({client_id:this.config.clientId,grant_type:"refresh_token",refresh_token:o.getRefreshToken()},r),null!==this.config.clientSecret&&(r.client_secret=this.config.clientSecret),r=n.stringify(r),i=e.extend({headers:{Authorization:void 0,"Content-Type":"application/x-www-form-urlencoded"}},i),t.post(""+this.config.baseUrl+this.config.grantPath,r,i).then(function(e){return o.setToken(e.data),e})}},{key:"revokeToken",value:function(r,i){var a=o.getRefreshToken();return r=e.extend({client_id:this.config.clientId,token:a?a:o.getAccessToken(),token_type_hint:a?"refresh_token":"access_token"},r),null!==this.config.clientSecret&&(r.client_secret=this.config.clientSecret),r=n.stringify(r),i=e.extend({headers:{"Content-Type":"application/x-www-form-urlencoded"}},i),t.post(""+this.config.baseUrl+this.config.revokePath,r,i).then(function(e){return o.removeToken(),e})}}]),a}();return new a(this.defaultConfig)},this.$get.$inject=["$http","OAuthToken"]}function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function u(){var t={name:"token",options:{secure:!0}};this.configure=function(n){if(!(n instanceof Object))throw new TypeError("Invalid argument: `config` must be an `Object`.");return e.extend(t,n),t},this.$get=function(e){var n=function(){function n(){i(this,n)}return s(n,[{key:"setToken",value:function(n){return e.putObject(t.name,n,t.options)}},{key:"getToken",value:function(){return e.getObject(t.name)}},{key:"getAccessToken",value:function(){return this.getToken()?this.getToken().access_token:void 0}},{key:"getAuthorizationHeader",value:function(){if(this.getTokenType()&&this.getAccessToken())return this.getTokenType().charAt(0).toUpperCase()+this.getTokenType().substr(1)+" "+this.getAccessToken()}},{key:"getRefreshToken",value:function(){return this.getToken()?this.getToken().refresh_token:void 0}},{key:"getTokenType",value:function(){return this.getToken()?this.getToken().token_type:void 0}},{key:"removeToken",value:function(){return e.remove(t.name,t.options)}}]),n}();return new n},this.$get.$inject=["$cookies"]}var c=e.module("angular-oauth2",[t]).config(o).factory("oauthInterceptor",r).provider("OAuth",a).provider("OAuthToken",u);r.$inject=["$q","$rootScope","OAuthToken"],o.$inject=["$httpProvider"];var s=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}(),f={baseUrl:null,clientId:null,clientSecret:null,grantPath:"/oauth2/token",revokePath:"/oauth2/revoke"},h=["baseUrl","clientId","grantPath","revokePath"],s=function(){function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(t,n,r){return n&&e(t.prototype,n),r&&e(t,r),t}}();return c});
-    var app = angular.module('app',['ngRoute','angular-oauth2','app.controllers','app.services']);
+var app = angular.module('app',['ngRoute','angular-oauth2','app.controllers','app.services']);
 
 angular.module('app.controllers',['ngMessages','angular-oauth2']);
 angular.module('app.services',['ngResource']);
@@ -521,45 +521,46 @@ app.config(['$routeProvider','OAuthProvider','OAuthTokenProvider','appConfigProv
             controller:'HomeController'
         })
         .when('/clients',{
-            templateUrl:'build/views/client/list.html',
-            controller:'ClientListController'
-        })
-        .when('/clients/:id',{
             templateUrl:'build/views/client/listAll.html',
-            controller:'ClientListController'
+            controller:'ClientsListControllerAll'
         })
-        .when('/clients/new',{
+        .when('/client/new',{
             templateUrl:'build/views/client/new.html',
             controller:'ClientNewController'
         })
-        .when('/clients/:id/edit',{
+        .when('/client/:id',{
+            templateUrl:'build/views/client/list.html',
+            controller:'ClientListController'
+        })
+        .when('/client/:id/edit',{
             templateUrl:'build/views/client/edit.html',
             controller:'ClientEditController'
         })
-        .when('/clients/:id/remove',{
+        .when('/client/:id/remove',{
             templateUrl:'build/views/client/remove.html',
             controller:'ClientRemoveController'
         })
         .when('/project/:id/notes',{
-            templateUrl:'build/views/client/list.html',
-            controller:'ClientListController'
+            templateUrl:'build/views/projectNote/listAll.html',
+            controller:'ProjectNoteListAllController'
         })
-        .when('/project/:id/notes/:idNote',{
-            templateUrl:'build/views/client/new.html',
-            controller:'ClientNewController'
+        .when('/project/:id/note/new',{
+            templateUrl:'build/views/projectNote/new.html',
+            controller:'ProjectNoteNewController'
         })
-        .when('/project/:id/notes/new',{
-            templateUrl:'build/views/client/new.html',
-            controller:'ClientNewController'
+        .when('/project/:id/note/:noteId',{
+            templateUrl:'build/views/projectNote/list.html',
+            controller:'ProjectNoteListController'
         })
-        .when('/project/:id/notes/:idNote/edit',{
-            templateUrl:'build/views/client/edit.html',
-            controller:'ClientEditController'
+        .when('/project/:id/note/:noteId/edit',{
+            templateUrl:'build/views/projectNote/edit.html',
+            controller:'ProjectNoteEditController'
         })
-        .when('/project/:id/notes/:idNote/remove',{
-            templateUrl:'build/views/client/remove.html',
-            controller:'ClientRemoveController'
+        .when('/project/:id/note/:noteId/remove',{
+            templateUrl:'build/views/projectNote/remove.html',
+            controller:'ProjectNoteRemoveController'
         });
+
         OAuthProvider.configure({
             baseUrl: appConfigProvider.config.baseUrl,
             clientId: 'appid1',
@@ -593,23 +594,7 @@ app.run(['$rootScope', '$window', 'OAuth', function($rootScope, $window, OAuth) 
         return $window.location.href = '/login?error_reason=' + rejection.data.error;
     });
 }]);
-/*var app = angular.module('app',['ngRoute','OAuthProvider','app.controllers']);
 
-angular.module('app.controllers',['angular-oauth2']);
-
-app.config(['$routeProvider','OAuthProvider',function($routeProvider,OAuthProvider){
-    $routeProvider
-    .when('/login',{
-        templateUrl:'build/views/login.html',
-        controller:'LoginController'
-    })
-    .when('/home',{
-        templateUrl:'build/views/home.html',
-        controller:'HomeController'
-    });
-
-}]);
-*/
 angular.module('app.controllers')
     .controller('HomeController',['$scope',function($scope){
 
@@ -656,6 +641,30 @@ angular.module('app.services').service('Client', ['$resource','appConfig', funct
         });
 }]);
 
+angular.module('app.services').service('Project', ['$resource','appConfig', function($resource,appConfig){
+        return $resource(appConfig.baseUrl+'/project/:id',{id:'@id'},{
+                update: {
+                        method:'PUT'
+                }
+        });
+}]);
+
+angular.module('app.services').service('ProjectNote', ['$resource','appConfig', function($resource,appConfig){
+        return $resource(appConfig.baseUrl+'/project/:id/note/:noteId',{id:'@id',noteId:'@noteId'},{
+                update: {
+                        method:'PUT'
+                },
+        });
+}]);
+
+angular.module('app.services').service('ProjectNotes', ['$resource','appConfig', function($resource,appConfig){
+    return $resource(appConfig.baseUrl+'/project/:id/notes',{id:'@id'},{
+        update: {
+            method:'PUT'
+        }
+    });
+}]);
+
 angular.module('app.controllers')
     .controller('ClientEditController',
         ['$scope','$location','$routeParams','Client',
@@ -672,19 +681,20 @@ angular.module('app.controllers')
 
     }]);
 angular.module('app.controllers')
-    .controller('ClientListController',['$scope','Client',function($scope,Client){
-        $scope.clients = Client.query();
-
-
-    }]);
-angular.module('app.controllers')
-    .controller('ClientListClientController',
+    .controller('ClientListController',
         ['$scope','$location','$routeParams','Client',
             function($scope,$location,$routeParams,Client){
                 $scope.client = Client.get({id:$routeParams.id});
             }
         ]
     );
+angular.module('app.controllers')
+    .controller('ClientsListControllerAll',['$scope','Client',function($scope,Client){
+
+        $scope.clients = Client.query();
+
+
+    }]);
 angular.module('app.controllers')
     .controller('ClientNewController',
         ['$scope','$location','Client',function($scope,$location,Client){
@@ -707,6 +717,80 @@ angular.module('app.controllers')
                 $scope.remove = function (){
                     $scope.client.$delete().then(function(){
                         $location.path('/clients');
+                    });
+                }
+    }]);
+angular.module('app.controllers')
+    .controller('ProjectNoteEditController',
+        ['$scope','$location','$routeParams','Project','ProjectNote',
+            function($scope,$location,$routeParams,Project,ProjectNote){
+                $scope.projectNote = ProjectNote.get({id:$routeParams.id,noteId:$routeParams.noteId});
+
+                $scope.project = Project.get({id:$routeParams.id});
+
+                $scope.save = function (){
+                    if ($scope.form.$valid){
+                        ProjectNote.update({id:$routeParams.id,noteId:$scope.projectNote.id}, $scope.projectNote,function(){
+                            $location.path('/project/'+($routeParams.id)+'/notes');
+                        });
+                    }
+                }
+
+    }]);
+angular.module('app.controllers')
+    .controller('ProjectNoteListController',
+        ['$scope','$location','$routeParams','ProjectNote','Project',
+            function($scope,$location,$routeParams,ProjectNote,Project){
+                $scope.projectNote = ProjectNote.get({id:$routeParams.id,noteId:$routeParams.noteId});
+
+                $scope.project = Project.get({id:$routeParams.id});
+
+
+            }
+        ]
+    );
+angular.module('app.controllers')
+    .controller('ProjectNoteListAllController',['$scope','$routeParams','Project','ProjectNotes',function($scope,$routeParams,Project,ProjectNotes){
+        $scope.project = Project.get({id:$routeParams.id});
+
+        $scope.projectNotes = ProjectNotes.query({id:$routeParams.id});
+
+
+    }]);
+angular.module('app.controllers')
+    .controller('ProjectNoteNewController',
+        ['$scope','$location','$routeParams','ProjectNote',function($scope,$location,$routeParams,ProjectNote){
+
+            $scope.projectNote = new ProjectNote();
+            $scope.projectNote.project_id = $routeParams.id;
+
+            $scope.save = function (){
+                if ($scope.form.$valid){
+                    console.log($scope.projectNote);
+                    $scope.projectNote.$save().then(function(){
+                        $location.path('/project/'+$routeParams.id+'/notes');
+                    });
+                }
+            }
+
+    }]);
+angular.module('app.controllers')
+    .controller('ProjectNoteRemoveController',
+        ['$scope','$location','$routeParams','Project','ProjectNote',
+            function($scope,$location,$routeParams,Project,ProjectNote){
+                $scope.projectNote = ProjectNote.get({id:$routeParams.id,noteId:$routeParams.noteId});
+
+                $scope.project = Project.get({id:$routeParams.id});
+
+                $scope.remove = function (){
+
+
+
+                    $scope.projectNote.$delete({
+                        id: $routeParams.id,
+                        noteId: $routeParams.noteId
+                    }).then(function () {
+                        $location.path('/project/' + $routeParams.id + '/notes');
                     });
                 }
     }]);

@@ -5,11 +5,3 @@ angular.module('app.services').service('ProjectNote', ['$resource','appConfig', 
                 },
         });
 }]);
-
-angular.module('app.services').service('ProjectNotes', ['$resource','appConfig', function($resource,appConfig){
-    return $resource(appConfig.baseUrl+'/project/:id/notes',{id:'@id'},{
-        update: {
-            method:'PUT'
-        }
-    });
-}]);

@@ -45,6 +45,7 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+
         return $this->service->create($request->all());
     }
 
@@ -60,7 +61,9 @@ class ProjectController extends Controller
        /* if ($this->checkProjectPermission($id) == false){
             return ['error'=>'access forbidden'];
         }*/
-        return $this->repository->skipPresenter()->find($id);
+        return $this->repository->find($id);
+
+        //dd($id);
         return $this->repository->with(['owner','client'])->find($id);
 
     }
@@ -95,7 +98,8 @@ class ProjectController extends Controller
         if ($this->checkProjectOwner($id) == false){
             return ['error'=>'access forbidden'];
         }
-        return $this->repository->find($id)->delete();
+
+        $this->repository->delete($id);
     }
 
     private function checkProjectOwner($project_id){
@@ -132,7 +136,7 @@ class ProjectController extends Controller
         $data = ['project_id'=>$id];
         $container = new \Illuminate\Container\Container();
         $projectMemberRepository = new \CodeProject\Repositories\ProjectMemberRepositoryEloquent($container);
-        return $projectMemberRepository->findWhere($data);
+        return $projectMemberRepository->skipPresenter()->findWhere($data);
 
 
     }

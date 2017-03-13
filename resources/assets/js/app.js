@@ -15,8 +15,26 @@ app.provider('appConfig', function(){
     }
 });
 
-app.config(['$routeProvider','OAuthProvider','OAuthTokenProvider','appConfigProvider',
-    function($routeProvider,OAuthProvider,OAuthTokenProvider,appConfigProvider){
+app.config(['$routeProvider', '$httpProvider','OAuthProvider','OAuthTokenProvider','appConfigProvider',
+    function($routeProvider,$httpProvider,OAuthProvider,OAuthTokenProvider,appConfigProvider){
+    //console.log(data);
+    $httpProvider.defaults.transformResponse = function (data, headersGetter){
+
+        var headersGetter = headersGetter();
+
+        if (headersGetter['content-type'] == 'application/json' ||
+            headersGetter['content-type'] == 'text/json' ){
+            // console.log(data);
+            var dataJson = JSON.parse(data);
+
+            if (dataJson.hasOwnProperty('data')){
+                dataJson = dataJson.data;
+            }
+            return dataJson;
+        }
+        return data;
+    };
+
     $routeProvider
         .when('/login',{
             templateUrl:'build/views/login.html',
@@ -65,8 +83,27 @@ app.config(['$routeProvider','OAuthProvider','OAuthTokenProvider','appConfigProv
         .when('/project/:id/note/:noteId/remove',{
             templateUrl:'build/views/projectNote/remove.html',
             controller:'ProjectNoteRemoveController'
+        })
+        .when('/projects',{
+            templateUrl:'build/views/project/listAll.html',
+            controller:'ProjectListAllController'
+        })
+        .when('/project/new',{
+            templateUrl:'build/views/project/new.html',
+            controller:'ProjectNewController'
+        })
+        .when('/project/:id',{
+            templateUrl:'build/views/project/list.html',
+            controller:'ProjectListController'
+        })
+        .when('/project/:id/edit',{
+            templateUrl:'build/views/project/edit.html',
+            controller:'ProjectEditController'
+        })
+        .when('/project/:id/remove',{
+            templateUrl:'build/views/project/remove.html',
+            controller:'ProjectRemoveController'
         });
-
         OAuthProvider.configure({
             baseUrl: appConfigProvider.config.baseUrl,
             clientId: 'appid1',

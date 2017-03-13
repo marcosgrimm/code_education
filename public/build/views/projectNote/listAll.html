@@ -5,7 +5,7 @@
                 <div class="panel-heading">
                     Listagem de Notas de Projeto: {{project.name}}
                     <span class="pull-right">
-                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{project.id}}/note/new">Adicionar Nota</a></button>
+                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{project.project_id}}/note/new">Adicionar Nota</a></button>
 
                     </span>
                 </div>
@@ -24,9 +24,9 @@
                                 <td>{{projectNote.note}}</td>
                                 <td>
                                     <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{projectNote.project_id}}/note/{{projectNote.id}}/edit">Editar</a> </button>
-                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{projectNote.project_id}}/note/{{projectNote.id}}/remove">Excluir</a></button>
-                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{projectNote.project_id}}/note/{{projectNote.id}}">Detalhar</a></button>
+                                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{projectNote.project_id}}/note/{{projectNote.note_id}}/edit">Editar</a> </button>
+                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{projectNote.project_id}}/note/{{projectNote.note_id}}/remove">Excluir</a></button>
+                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{projectNote.project_id}}/note/{{projectNote.note_id}}">Detalhar</a></button>
                                     </div>
                                 </td>
                             </tr>

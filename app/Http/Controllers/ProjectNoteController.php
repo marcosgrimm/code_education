@@ -42,6 +42,7 @@ class ProjectNoteController extends Controller
      */
     public function store(Request $request)
     {
+       // dd(1);
         return $this->service->create($request->all());
     }
 
@@ -53,7 +54,7 @@ class ProjectNoteController extends Controller
      */
     public function show($id,$noteId)
     {
-        return $this->repository->skipPresenter()->findWhere(['project_id'=>$id, 'id'=>$noteId])[0];
+        return $this->repository->find($noteId);
     }
 
     /**
@@ -82,6 +83,6 @@ class ProjectNoteController extends Controller
      */
     public function destroy($id,$noteId)
     {
-        $this->repository->find($noteId)->delete();
+         $this->repository->delete($noteId);
     }
 }
