@@ -7,16 +7,15 @@
  */
 
 namespace CodeProject\Transformers;
+
 use CodeProject\Entities\Project;
 use League\Fractal\TransformerAbstract;
-use CodeProject\Transformers\ProjectMemberTransformer;
-use CodeProject\Transformers\ProjectTaskTransformer;
-use CodeProject\Transformers\ProjectNotesTransformer;
+
 
 class ProjectTransformer extends  TransformerAbstract
 {
 
-    protected $defaultIncludes = ['members','tasks','notes'];
+    protected $defaultIncludes = ['members','tasks','notes','client'];
 
     public function transform(Project $project){
         return [
@@ -25,12 +24,19 @@ class ProjectTransformer extends  TransformerAbstract
             'client_id'=>$project->client_id,
             'name'=> $project->name,
             'description'=>$project->description,
-            'progress'=>$project->progress,
+            'progress'=> (int) $project->progress,
             'status'=>$project->status,
             'due_date'=>$project->due_date
 
         ];
 
+    }
+
+    public function includeClient(Project $project)
+    {
+        if ($project->client) {
+            return $this->item($project->client, new ClientTransformer());
+        }
     }
 
     public function includeMembers(Project $project){

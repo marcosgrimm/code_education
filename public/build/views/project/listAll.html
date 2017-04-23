@@ -14,7 +14,6 @@
                        <thead>
                         <tr>
                             <th>Nr.</th>
-                            <th class="col-md-1">Proprietário</th>
                             <th class="col-md-1">Cliente</th>
                             <th class="col-md-2">Nome</th>
                             <th class="col-md-3">Descrição</th>
@@ -27,13 +26,12 @@
                        <tbody>
                             <tr ng-repeat="project  in projects  track by $index">
                                 <th>{{$index+1}}</th>
-                                <td>{{project.owner_id}}</td>
-                                <td>{{project.client_id}}</td>
+                                <td>{{project.client.data.name}}</td>
                                 <td>{{project.name}}</td>
                                 <td>{{project.description}}</td>
                                 <td>{{project.progress}}%</td>
                                 <td>{{project.status}}</td>
-                                <td>{{project.due_date}}</td>
+                                <td>{{project.due_date | dateBr}}</td>
                                 <td class="text-center">
                                     <div class="btn-group" role="group" aria-label="...">
                                         <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{project.project_id}}/edit">Editar</a> </button>
