@@ -80,6 +80,7 @@
 		<script src="{{asset('build/js/vendor/angular-cookies.min.js')}}"></script>
 		<script src="{{asset('build/js/vendor/query-string.js')}}"></script>
 		<script src="{{asset('build/js/vendor/angular-oauth2.min.js')}}"></script>
+		<script src="{{asset('build/js/vendor/ng-file-upload.js')}}"></script>
 
 		<script src="{{asset('build/js/app.js')}}"></script>
 
@@ -102,11 +103,19 @@
 		<script src="{{asset('build/js/controllers/projectNote/projectNoteEdit.js')}}"></script>
 		<script src="{{asset('build/js/controllers/projectNote/projectNoteRemove.js')}}"></script>
 
+		<script src="{{asset('build/js/controllers/projectFile/projectFileListAll.js')}}"></script>
+		<script src="{{asset('build/js/controllers/projectFile/projectFileNew.js')}}"></script>
+		<script src="{{asset('build/js/controllers/projectFile/projectFileEdit.js')}}"></script>
+		<script src="{{asset('build/js/controllers/projectFile/projectFileRemove.js')}}"></script>
+
 		<script src="{{asset('build/js/controllers/project/projectList.js')}}"></script>
 		<script src="{{asset('build/js/controllers/project/projectListAll.js')}}"></script>
 		<script src="{{asset('build/js/controllers/project/projectNew.js')}}"></script>
 		<script src="{{asset('build/js/controllers/project/projectEdit.js')}}"></script>
 		<script src="{{asset('build/js/controllers/project/projectRemove.js')}}"></script>
+
+		<!-- DIRECTIVES -->
+		<script src="{{asset('build/js/directives/projectFileDownload	.js')}}"></script>
 
 		<!-- FILTERS -->
 		<script src="{{asset('build/js/filters/dateBr.js')}}"></script>
@@ -114,8 +123,10 @@
 		<!-- SERVICES -->
 		<script src="{{asset('build/js/services/client.js')}}"></script>
 		<script src="{{asset('build/js/services/projectNote.js')}}"></script>
+		<script src="{{asset('build/js/services/projectFile.js')}}"></script>
 		<script src="{{asset('build/js/services/project.js')}}"></script>
 		<script src="{{asset('build/js/services/user.js')}}"></script>
+		<script src="{{asset('build/js/services/url.js')}}"></script>
 	@else
 		<script src="{{elixir('js/all.js')}}"></script>
 	@endif

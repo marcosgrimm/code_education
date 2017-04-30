@@ -2,29 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee8a38c5-cf9d-4ef1-9a94-3a89788f6676" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/filters/dateBr.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/build/js/vendor/ui-bootstrap.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/laravel.iml" afterPath="$PROJECT_DIR$/.idea/laravel.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Presenters/ProjectFilePresenter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Services/ProjectFileService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Transformers/ProjectFileTransformer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileEdit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileListAll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileNew.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileRemove.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/directives/projectFileDownload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/services/projectFile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/services/url.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/projectFile/edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/projectFile/listAll.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/projectFile/new.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/projectFile/remove.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/templates/projectFileDownload.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ClientRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/ClientRepositoryEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Transformers/ClientTransformer.php" afterPath="$PROJECT_DIR$/app/Transformers/ClientTransformer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Transformers/ProjectTransformer.php" afterPath="$PROJECT_DIR$/app/Transformers/ProjectTransformer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entities/ProjectFile.php" afterPath="$PROJECT_DIR$/app/Entities/ProjectFile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Services/ProjectService.php" afterPath="$PROJECT_DIR$/app/Services/ProjectService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Validators/ProjectFileValidator.php" afterPath="$PROJECT_DIR$/app/Validators/ProjectFileValidator.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/app.js" afterPath="$PROJECT_DIR$/public/build/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/project/projectEdit.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/project/projectEdit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/project/projectNew.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/project/projectNew.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/services/project.js" afterPath="$PROJECT_DIR$/public/build/js/services/project.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/project/edit.html" afterPath="$PROJECT_DIR$/public/build/views/project/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/project/listAll.html" afterPath="$PROJECT_DIR$/public/build/views/project/listAll.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/project/new.html" afterPath="$PROJECT_DIR$/public/build/views/project/new.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app.js" afterPath="$PROJECT_DIR$/resources/assets/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectEdit.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectEdit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectNew.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectNew.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/services/project.js" afterPath="$PROJECT_DIR$/resources/assets/js/services/project.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project/edit.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project/listAll.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project/listAll.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project/new.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project/new.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
     </list>
     <ignored path="laravel.iws" />
@@ -49,101 +52,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="projectNew.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project/projectNew.js">
+      <file leaf-file-name="projectFileEdit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileEdit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="17" column="27" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="17" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectTransformer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Transformers/ProjectTransformer.php">
+      <file leaf-file-name="projectFileListAll.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileListAll.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="126">
+              <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientRepositoryEloquent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Repositories/ClientRepositoryEloquent.php">
+      <file leaf-file-name="ProjectFileService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Services/ProjectFileService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="30" column="77" lean-forward="false" selection-start-line="30" selection-start-column="77" selection-end-line="30" selection-end-column="77" />
-              <folding />
+            <state relative-caret-position="391">
+              <caret line="124" column="39" lean-forward="false" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="39" />
+              <folding>
+                <element signature="e#127#178#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientController.php">
+      <file leaf-file-name="listAll.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectFile/listAll.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1638">
-              <caret line="80" column="7" lean-forward="false" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/views/project/new.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="90" column="66" lean-forward="false" selection-start-line="90" selection-start-column="66" selection-end-line="90" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/services/project.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            <state relative-caret-position="609">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/views/project/edit.html">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectFile/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="85" column="42" lean-forward="false" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="66" />
+            <state relative-caret-position="607">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="40" selection-start-column="31" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
+      <file leaf-file-name="remove.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectFile/remove.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+            <state relative-caret-position="210">
+              <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bower.json">
+      <file leaf-file-name="projectFileRemove.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileRemove.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projectEdit.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project/projectEdit.js">
+      <file leaf-file-name="ProjectFileController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="313">
+              <caret line="108" column="8" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectFile/new.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="29" column="101" lean-forward="false" selection-start-line="29" selection-start-column="101" selection-end-line="29" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectNoteController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectNoteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1073">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -155,29 +160,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>elixir</find>
-      <find>&lt;div class=&quot;form-group&quot;&gt;                             &lt;label class=&quot;col-md-4 control-label&quot;&gt;</find>
-      <find>$get</find>
-      <find>phone</find>
-      <find>delete</find>
-      <find>respons</find>
-      <find>skipPresenter</find>
-      <find>proje</find>
-      <find>Client</find>
-      <find>Note</find>
-      <find>data</find>
-      <find>skip</find>
-      <find>ClientTransformer</find>
-      <find>prese</find>
-      <find>tr</find>
-      <find>td&gt;</find>
-      <find>th</find>
-      <find>ProjectNoteListAllController</find>
       <find>ProjectNotesTransformer</find>
       <find>filters</find>
       <find>u</find>
@@ -187,6 +175,27 @@
       <find>id</find>
       <find>console.log</find>
       <find>due</find>
+      <find>notes</find>
+      <find>Nota</find>
+      <find>P</find>
+      <find>bla</find>
+      <find>Note</find>
+      <find>ProjectFileListAllController</find>
+      <find>showFile</find>
+      <find>index</find>
+      <find>b</find>
+      <find>blade</find>
+      <find>blad</find>
+      <find>projectFileDownload</find>
+      <find>a</find>
+      <find>app</find>
+      <find>app.</find>
+      <find>directives</find>
+      <find>getFileName</find>
+      <find>file</find>
+      <find>event</find>
+      <find>note</find>
+      <find>deleteFile</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;table class=&quot;table&quot;&gt;                             &lt;tr&gt;                                 &lt;th&gt;</replace>
@@ -194,6 +203,11 @@
       <replace>li</replace>
       <replace>strong</replace>
       <replace>model</replace>
+      <replace>files</replace>
+      <replace>Arquivo</replace>
+      <replace>description</replace>
+      <replace>File</replace>
+      <replace>file</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -203,26 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteList.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/views/projectNote/edit.html" />
-        <option value="$PROJECT_DIR$/resources/assets/js/views/projectNote/remove.html" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteRemove.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/views/projectNote/list.html" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/client/clientNew.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/views/client/new.html" />
-        <option value="$PROJECT_DIR$/resources/assets/js/views/projectNote/new.html" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/resources/assets/js/services/client.js" />
-        <option value="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
-        <option value="$PROJECT_DIR$/app/Repositories/UserRepositoryEloquent.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/services/user.js" />
-        <option value="$PROJECT_DIR$/app/Providers/CodeProjectRepositoryProvider.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/home.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/project/projectList.js" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectTaskController.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/services/projectNote.js" />
-        <option value="$PROJECT_DIR$/app/Presenters/ClientPresenter.php" />
         <option value="$PROJECT_DIR$/app/Repositories/ProjectNoteRepositoryEloquent.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/login.js" />
@@ -238,22 +232,42 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/project/projectListAll.js" />
         <option value="$PROJECT_DIR$/app/Transformers/ClientTransformer.php" />
-        <option value="$PROJECT_DIR$/app/Services/ProjectService.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/views/project/listAll.html" />
         <option value="$PROJECT_DIR$/resources/assets/js/filters/dateBr.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/services/project.js" />
-        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/public/build/views/project/new.html" />
         <option value="$PROJECT_DIR$/app/Repositories/ClientRepositoryEloquent.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/project/projectNew.js" />
         <option value="$PROJECT_DIR$/app/Transformers/ProjectTransformer.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/project/projectEdit.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/views/project/edit.html" />
         <option value="$PROJECT_DIR$/resources/assets/js/views/project/new.html" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/app/Presenters/ProjectFilePresenter.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" />
+        <option value="$PROJECT_DIR$/app/Services/ProjectService.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/services/url.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileNew.js" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/projectFile/listAll.html" />
+        <option value="$PROJECT_DIR$/app/Entities/ProjectFile.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/directives/projectFileDownload.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/templates/projectFileDownload.html" />
+        <option value="$PROJECT_DIR$/app/Transformers/ProjectFileTransformer.php" />
+        <option value="$PROJECT_DIR$/public/build/js/app.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/services/projectFile.js" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileListAll.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileEdit.js" />
+        <option value="$PROJECT_DIR$/app/Validators/ProjectFileValidator.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/projectFile/edit.html" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/projectFile/remove.html" />
+        <option value="$PROJECT_DIR$/app/Services/ProjectFileService.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileRemove.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/projectFile/new.html" />
       </list>
     </option>
   </component>
@@ -368,6 +382,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -377,6 +393,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -429,6 +477,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -448,7 +500,197 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projectFile" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projectFile" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -480,7 +722,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
+              <option name="myItemId" value="Services" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -504,8 +746,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -516,6 +756,8 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -523,11 +765,11 @@
       <recent name="$PROJECT_DIR$/app/Models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\curso\projects\resources\assets\js\views\project" />
-      <recent name="C:\wamp64\www\curso\projects\resources\assets\js\controllers\project" />
-      <recent name="C:\wamp64\www\curso\projects\app\Repositories" />
       <recent name="C:\wamp64\www\curso\projects\resources\assets\js\services" />
-      <recent name="C:\wamp64\www\curso\projects\resources\assets\js\views\projectNote" />
+      <recent name="C:\wamp64\www\curso\projects\app\Services" />
+      <recent name="C:\wamp64\www\curso\projects\app\Presenters" />
+      <recent name="C:\wamp64\www\curso\projects\app\Transformers" />
+      <recent name="C:\wamp64\www\curso\projects\resources\assets\js\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -649,12 +891,14 @@
       <workItem from="1491186079143" duration="6000" />
       <workItem from="1491266830699" duration="8909000" />
       <workItem from="1492907208477" duration="6691000" />
-      <workItem from="1492974719820" duration="2169000" />
+      <workItem from="1492974719820" duration="13078000" />
+      <workItem from="1493169734426" duration="13391000" />
+      <workItem from="1493582966467" duration="6944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88334000" />
+    <option name="totallyTimeSpent" value="119578000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -703,290 +947,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectNoteRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="37" column="35" lean-forward="false" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Presenters/ProjectPresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Presenters/ProjectNotePresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Entities/ProjectNote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteEdit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/client/listAll.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="35" column="90" lean-forward="false" selection-start-line="35" selection-start-column="90" selection-end-line="35" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/teste.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientRemove.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteListAll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectNote/listAll.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="82" lean-forward="false" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteRemove.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/projectNote.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/ProjectNoteService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/ClientService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-462">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectNote/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="106" lean-forward="false" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientListAll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/client/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientNew.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteNew.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="66" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/project/remove.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="4" column="62" lean-forward="false" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project/projectRemove.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectNoteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="85" column="10" lean-forward="true" selection-start-line="85" selection-start-column="10" selection-end-line="85" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Transformers/ClientTransformer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project/projectListAll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Entities/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/ProjectService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/filters/dateBr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/project/listAll.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="63" lean-forward="false" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="77" column="46" lean-forward="false" selection-start-line="77" selection-start-column="46" selection-end-line="77" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="61" lean-forward="false" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/bower_components/angular-bootstrap/ui-bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="486" lean-forward="false" selection-start-line="7" selection-start-column="486" selection-end-line="7" selection-end-column="511" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/build/views/project/new.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -998,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="30" column="77" lean-forward="false" selection-start-line="30" selection-start-column="77" selection-end-line="30" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,27 +969,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Transformers/ProjectTransformer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,7 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
           <caret line="18" column="0" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,7 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,7 +994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
           <caret line="85" column="42" lean-forward="false" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,7 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="90" column="66" lean-forward="false" selection-start-line="90" selection-start-column="66" selection-end-line="90" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,6 +1008,334 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="55" lean-forward="false" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectFileRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectFileRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Presenters/ProjectFilePresenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+          <folding>
+            <element signature="e#128#180#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/repository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3971">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2354">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-674">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/broadcasting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-296">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="114" column="28" lean-forward="false" selection-start-line="114" selection-start-column="28" selection-end-line="114" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/ProjectService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="197" column="38" lean-forward="false" selection-start-line="197" selection-start-column="38" selection-end-line="197" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/CodeProjectRepositoryProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-254">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/app/2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/url.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Entities/Project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="27" column="24" lean-forward="false" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileNew.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="133" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="133" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/mml3/mathml3-content.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1577">
+          <caret line="146" column="48" lean-forward="false" selection-start-line="146" selection-start-column="47" selection-end-line="146" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2457">
+          <caret line="117" column="72" lean-forward="false" selection-start-line="117" selection-start-column="72" selection-end-line="117" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Entities/ProjectFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/build/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/directives/projectFileDownload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectNote/projectNoteEdit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/projectFile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="15" lean-forward="false" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/templates/projectFileDownload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Transformers/ProjectFileTransformer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="e#130#169#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Validators/ProjectFileValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectFile/listAll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectFile/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="40" selection-start-column="31" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectFile/remove.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="49" column="77" lean-forward="false" selection-start-line="49" selection-start-column="77" selection-end-line="49" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectNoteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1073">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileListAll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileRemove.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/projectFile/projectFileEdit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/ProjectFileService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="124" column="39" lean-forward="false" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="39" />
+          <folding>
+            <element signature="e#127#178#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="108" column="8" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/projectFile/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="101" lean-forward="false" selection-start-line="29" selection-start-column="101" selection-end-line="29" selection-end-column="101" />
           <folding />
         </state>
       </provider>

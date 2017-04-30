@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Listagem de Arquivos de Projeto: {{project.name}}
+                    <span class="pull-right">
+                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{project.project_id}}/file/new">Adicionar arquivo</a></button>
+
+                    </span>
+                </div>
+                <div class="panel-body">
+                   <table class="table">
+                       <thead>
+                        <tr>
+                            <th class="col-md-1">Nome</th>
+                            <th class="col-md-7">Descrição</th>
+                            <th class="col-md-3">Ação</th>
+                        </tr>
+                       </thead>
+                       <tbody>
+                            <tr ng-repeat="projectFile in projectFiles">
+                                <td>{{projectFile.name}}</td>
+                                <td>{{projectFile.description}}</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <!--<button type="button" class="btn btn-default  btn-xs "><a ng-href="project/{{projectFile.project_id}}/file/{{projectFile.id}}/download" target="_blank">Download</a> </button>-->
+
+                                        <project-file-download project-id="{{projectFile.project_id}}" id-file="{{projectFile.id}}"></project-file-download>
+
+                                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{projectFile.project_id}}/file/{{projectFile.id}}/edit">Editar</a> </button>
+                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{projectFile.project_id}}/file/{{projectFile.id}}/remove">Excluir</a></button>
+                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{projectFile.project_id}}/file/{{projectFile.id}}">Detalhar</a></button>
+                                    </div>
+                                </td>
+                            </tr>
+                       </tbody>
+                   </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

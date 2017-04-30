@@ -21,7 +21,7 @@ Route::post('oauth/access_token', function(){
 });
 
 
-Route::group(['middleware'=>'oauth'], function(){
+//Route::group(['middleware'=>'oauth'], function(){
 
     Route::resource('client','ClientController',['except' =>['create','edit']]);
 
@@ -42,11 +42,14 @@ Route::group(['middleware'=>'oauth'], function(){
         Route::delete('/{id}/task/{taskId}', 'ProjectTaskController@delete');
 
 
-        Route::get('/{id}/members', 'ProjectController@showMembers');
+        Route::get('{id}/file', 'ProjectFileController@index');
+        Route::get('{id}/file/{fileId}', 'ProjectFileController@show');
+        Route::get('{id}/file/{fileId}/download', 'ProjectFileController@showFile');
+        Route::post('{id}/file', 'ProjectFileController@store');
+        Route::put('{id}/file/{fileId}', 'ProjectFileController@update');
+        Route::delete('{id}/file/{fileId}', 'ProjectFileController@destroy');;
 
-        Route::post('/{id}/file', 'ProjectFileController@store');
-        Route::delete('/{id}/file/{fileId}', 'ProjectFileController@destroy');
     });
 
     Route::get('/user/authenticated', 'UserController@authenticated');
-});
+//});

@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Edição de Arquivo de Projeto</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" name="form" role="form" method="POST" ng-submit="save();">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Projeto</label>
+
+                            <div class="col-md-6">
+                                {{project.name}}
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{'has-error': !form.name.valid && form.name.$touched}">
+                            <label class="col-md-4 control-label">Name</label>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="name" ng-model="projectFile.name" required>
+                                <div ng-messages="form.name.$error" class="help-block" ng-show="form.name.$touched">
+                                    <div ng-message="required">Campo obrigatório.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" ng-class="{'has-error': !form.description.valid && form.description.$touched}">
+                            <label class="col-md-4 control-label">Descrição</label>
+
+                            <div class="col-md-6">
+                                <textarea class="form-control" rows="5" name="description" ng-model="projectFile.description" required></textarea>
+                                <div ng-messages="form.description.$error" class="help-block" ng-show="form.description.$touched">
+                                    <div ng-message="required">Campo obrigatório.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error': !form.file.valid && form.file.$touched}">
+                            <label class="col-md-4 control-label">Arquivo</label>
+
+                            <div class="col-md-6">
+                                <project-file-download project-id="{{projectFile.project_id}}" id-file="{{projectFile.id}}"></project-file-download>
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

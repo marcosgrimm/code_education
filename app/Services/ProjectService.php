@@ -186,4 +186,23 @@ class ProjectService
         }
 
     }
+
+
+    public function checkProjectOwner($project_id){
+        $owner_id = \Authorizer::getResourceOwnerId();
+        return ($this->repository->isOwner($project_id,$owner_id));
+    }
+
+    public function checkProjectMember($project_id){
+        $member_id = \Authorizer::getResourceOwnerId();
+        return ($this->repository->hasMember($project_id,$member_id));
+    }
+
+    public function checkProjectPermission ($project_id){
+        if ($this->checkProjectOwner($project_id) || $this->checkProjectMember($project_id) ){
+            return true;
+        }
+
+        return false;
+    }
 }

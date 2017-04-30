@@ -77,7 +77,7 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if ($this->checkProjectOwner($id) == false){
+        if ($this->service->checkProjectOwner($id) == false){
             return ['error'=>'access forbidden'];
         }
 
@@ -95,30 +95,13 @@ class ProjectController extends Controller
     public function destroy($id)
     {
 
-        if ($this->checkProjectOwner($id) == false){
+        if ($this->service->checkProjectOwner($id) == false){
             return ['error'=>'access forbidden'];
         }
 
         $this->repository->delete($id);
     }
 
-    private function checkProjectOwner($project_id){
-        $owner_id = \Authorizer::getResourceOwnerId();
-        return ($this->service->isOwner($project_id,$owner_id));
-    }
-
-    private function checkProjectMember($project_id){
-        $member_id = \Authorizer::getResourceOwnerId();
-        return ($this->service->isMember($project_id,$member_id));
-    }
-
-    private function checkProjectPermission ($project_id){
-        if ($this->checkProjectOwner($project_id) || $this->checkProjectMember($project_id) ){
-            return true;
-        }
-
-        return false;
-    }
 
     /**
      * Display the specified resource.
@@ -129,7 +112,7 @@ class ProjectController extends Controller
     public function showMembers($id)
     {
 
-        if ($this->checkProjectPermission($id) == false){
+        if ($this->service->checkProjectPermission($id) == false){
             return ['error'=>'access forbidden'];
         }
 
