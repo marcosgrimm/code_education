@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Listagem de Tarefas do Projeto: {{project.name}}
+                    <span class="pull-right">
+                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{project.project_id}}/task/new">Adicionar Tarefa</a></button>
+
+                    </span>
+                </div>
+                <div class="panel-body">
+                   <table class="table">
+                       <thead>
+                        <tr>
+                            <th class="col-md-4">Nome</th>
+                            <th class="col-md-2">Data Inicial</th>
+                            <th class="col-md-2">Data Final</th>
+                            <th class="col-md-1">Status</th>
+                        </tr>
+                       </thead>
+                       <tbody>
+                            <tr ng-repeat="projectTask in projectTasks">
+                                <td>{{projectTask.name}}</td>
+                                <td>{{projectTask.start_date | dateBr}}</td>
+                                <td>{{projectTask.due_date | dateBr}}</td>
+                                <td>{{projectTask.status}}</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{projectTask.project_id}}/task/{{projectTask.id}}/edit">Editar</a> </button>
+                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{projectTask.project_id}}/task/{{projectTask.id}}/remove">Excluir</a></button>
+                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{projectTask.project_id}}/task/{{projectTask.id}}">Detalhar</a></button>
+                                    </div>
+                                </td>
+                            </tr>
+                       </tbody>
+                   </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

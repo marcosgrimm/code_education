@@ -21,13 +21,13 @@ Route::post('oauth/access_token', function(){
 });
 
 
-//Route::group(['middleware'=>'oauth'], function(){
+Route::group(['middleware'=>'oauth'], function(){
 
     Route::resource('client','ClientController',['except' =>['create','edit']]);
 
     Route::resource('project', 'ProjectController', ['except' => ['create', 'edit']]);
 
-    Route::group(['prefix'=>'project'], function(){
+    Route::group(['middleware'=>'check-project-permission','prefix'=>'project'], function(){
 
         Route::get('/{id}/note', 'ProjectNoteController@index');
         Route::post('/{id}/note', 'ProjectNoteController@store');
@@ -39,8 +39,7 @@ Route::post('oauth/access_token', function(){
         Route::post('/{id}/task', 'ProjectTaskController@store');
         Route::get('/{id}/task/{taskId}', 'ProjectTaskController@show');
         Route::put('/{id}/task/{taskId}', 'ProjectTaskController@update');
-        Route::delete('/{id}/task/{taskId}', 'ProjectTaskController@delete');
-
+        Route::delete('/{id}/task/{taskId}', 'ProjectTaskController@destroy');
 
         Route::get('{id}/file', 'ProjectFileController@index');
         Route::get('{id}/file/{fileId}', 'ProjectFileController@show');
@@ -52,4 +51,4 @@ Route::post('oauth/access_token', function(){
     });
 
     Route::get('/user/authenticated', 'UserController@authenticated');
-//});
+});

@@ -17,7 +17,6 @@ angular.module('app.controllers')
 
 
                 $scope.open = function ($event){
-                    console.log($event);
                     $scope.due_date.status.opened = true;
                 }
 

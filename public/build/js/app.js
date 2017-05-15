@@ -21,6 +21,13 @@ app.provider('appConfig', ['$httpParamSerializerProvider', function($httpParamSe
                 {value:3,label:'Concluído'}
             ]
         },
+        projectTask:{
+            status:[
+                {value:1,label:'Não Iniciado'},
+                {value:2,label:'Iniciado'},
+                {value:3,label:'Concluído'}
+            ]
+        },
         utils:{
             transformResponse: function (data, headers) {
                 var headersGetter = headers();
@@ -126,6 +133,26 @@ app.config(['$routeProvider', '$httpProvider','OAuthProvider','OAuthTokenProvide
         .when('/project/:id/note/:noteId/remove',{
             templateUrl:'build/views/projectNote/remove.html',
             controller:'ProjectNoteRemoveController'
+        })
+        .when('/project/:id/tasks',{
+            templateUrl:'build/views/projectTask/listAll.html',
+            controller:'ProjectTaskListAllController'
+        })
+        .when('/project/:id/task/new',{
+            templateUrl:'build/views/projectTask/new.html',
+            controller:'ProjectTaskNewController'
+        })
+        .when('/project/:id/task/:taskId',{
+            templateUrl:'build/views/projectTask/list.html',
+            controller:'ProjectTaskListController'
+        })
+        .when('/project/:id/task/:taskId/edit',{
+            templateUrl:'build/views/projectTask/edit.html',
+            controller:'ProjectTaskEditController'
+        })
+        .when('/project/:id/task/:taskId/remove',{
+            templateUrl:'build/views/projectTask/remove.html',
+            controller:'ProjectTaskRemoveController'
         })
         .when('/projects',{
             templateUrl:'build/views/project/listAll.html',

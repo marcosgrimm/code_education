@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Visualização de Tarefa de Projeto</div>
+                <div class="panel-body">
+                    <div class="row col-md-8 col-md-offset-2 ">
+
+                        <table class="table">
+                            <tr>
+                                <th>Projeto</th>
+                                <td>{{project.name}}</td>
+                            </tr>
+                            <tr>
+                                <th>Nome</th>
+                                <td>{{projectTask.name}}</td>
+                            </tr>
+                            <tr>
+                                <th>Data Inicial</th>
+                                <td>{{projectTask.start_date | dateBr}}</td>
+                            </tr>
+                            <tr>
+                                <th>Data Final</th>
+                                <td>{{projectTask.due_date | dateBr}}</td>
+                            </tr>
+                            <tr>
+                                <th>Status</th>
+                                <td>{{projectTask.status}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

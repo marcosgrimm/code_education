@@ -103,6 +103,20 @@
 		<script src="{{asset('build/js/controllers/projectNote/projectNoteEdit.js')}}"></script>
 		<script src="{{asset('build/js/controllers/projectNote/projectNoteRemove.js')}}"></script>
 
+
+		<script src="{{asset('build/js/controllers/projectTask/projectTaskList.js')}}"></script>
+		<script src="{{asset('build/js/controllers/projectTask/projectTaskListAll.js')}}"></script>
+		<script src="{{asset('build/js/controllers/projectTask/projectTaskNew.js')}}"></script>
+		<script src="{{asset('build/js/controllers/projectTask/projectTaskEdit.js')}}"></script>
+		<script src="{{asset('build/js/controllers/projectTask/projectTaskRemove.js')}}"></script>
+
+
+		<script src="{{asset('build/js/controllers/projectMember/projectMemberList.js')}}"></script>
+		<script src="{{asset('build/js/controllers/projectMember/projectMemberListAll.js')}}"></script>
+		<script src="{{asset('build/js/controllers/projectMember/projectMemberNew.js')}}"></script>
+		<script src="{{asset('build/js/controllers/projectMember/projectMemberEdit.js')}}"></script>
+		<script src="{{asset('build/js/controllers/projectMember/projectMemberRemove.js')}}"></script>
+
 		<script src="{{asset('build/js/controllers/projectFile/projectFileListAll.js')}}"></script>
 		<script src="{{asset('build/js/controllers/projectFile/projectFileNew.js')}}"></script>
 		<script src="{{asset('build/js/controllers/projectFile/projectFileEdit.js')}}"></script>
@@ -122,7 +136,10 @@
 
 		<!-- SERVICES -->
 		<script src="{{asset('build/js/services/client.js')}}"></script>
+
 		<script src="{{asset('build/js/services/projectNote.js')}}"></script>
+		<script src="{{asset('build/js/services/projectTask.js')}}"></script>
+		<script src="{{asset('build/js/services/projectMember.js')}}"></script>
 		<script src="{{asset('build/js/services/projectFile.js')}}"></script>
 		<script src="{{asset('build/js/services/project.js')}}"></script>
 		<script src="{{asset('build/js/services/user.js')}}"></script>

@@ -17,6 +17,9 @@ use CodeProject\Validators\ProjectValidator;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Contracts\Filesystem\Factory;
 use Prettus\Validator\Exceptions\ValidatorException;
+
+use LucaDegasperi\OAuth2Server\Facades\Authorizer;
+
 use CodeProject\Http\Requests\Request as Request;
 
 
@@ -189,6 +192,7 @@ class ProjectService
 
 
     public function checkProjectOwner($project_id){
+
         $owner_id = \Authorizer::getResourceOwnerId();
         return ($this->repository->isOwner($project_id,$owner_id));
     }

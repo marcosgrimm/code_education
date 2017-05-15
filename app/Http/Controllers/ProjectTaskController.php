@@ -53,7 +53,7 @@ class ProjectTaskController extends Controller
      */
     public function show($id,$taskId)
     {
-        return $this->repository->skipPresenter()->findWhere(['project_id'=>$id, 'id'=>$taskId]);
+        return $this->repository->find($taskId);
     }
 
     /**
