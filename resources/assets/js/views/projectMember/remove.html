@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Exclusão de ProjectNote</div>
+                <div class="panel-heading">Exclusão de Membro de Projeto</div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <p class="lead text-danger">Desejar realmente excluir esta nota?</p>
+                        <p class="lead text-danger">Desejar realmente excluir este membro?</p>
                         <ul>
-                            <li><strong>Title</strong>: {{projectNote.title}}</li>
-                            <li><strong>Note</strong>: {{projectNote.note}}</li>
+                            <li><strong>Projeto</strong>: {{project.name}}</li>
+                            <li><strong>Membro</strong>: {{projectMember.member.name}}</li>
                         </ul>
                         <div class="col-md-6 col-md-offset-4">
                             <button type="button" class="btn btn-danger" ng-click="remove()">

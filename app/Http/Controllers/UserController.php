@@ -39,7 +39,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+
+        return $this->repository->with(['projects'])->all();
     }
 
     /**

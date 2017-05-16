@@ -154,6 +154,18 @@ app.config(['$routeProvider', '$httpProvider','OAuthProvider','OAuthTokenProvide
             templateUrl:'build/views/projectTask/remove.html',
             controller:'ProjectTaskRemoveController'
         })
+        .when('/project/:id/members',{
+            templateUrl:'build/views/projectMember/listAll.html',
+            controller:'ProjectMemberListAllController'
+        })
+        .when('/project/:id/member/new',{
+            templateUrl:'build/views/projectMember/new.html',
+            controller:'ProjectMemberNewController'
+        })
+        .when('/project/:id/member/:memberId/remove',{
+            templateUrl:'build/views/projectMember/remove.html',
+            controller:'ProjectMemberRemoveController'
+        })
         .when('/projects',{
             templateUrl:'build/views/project/listAll.html',
             controller:'ProjectListAllController'

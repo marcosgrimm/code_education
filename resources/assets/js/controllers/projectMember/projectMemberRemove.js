@@ -6,6 +6,7 @@ angular.module('app.controllers')
 
                 $scope.project = Project.get({id:$routeParams.id});
 
+console.log($scope.projectMember );
                 $scope.remove = function (){
 
 

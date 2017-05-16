@@ -26,8 +26,16 @@ Route::group(['middleware'=>'oauth'], function(){
     Route::resource('client','ClientController',['except' =>['create','edit']]);
 
     Route::resource('project', 'ProjectController', ['except' => ['create', 'edit']]);
+    
+    Route::resource('user','UserController',['except' =>['create','edit']]);
 
     Route::group(['middleware'=>'check-project-permission','prefix'=>'project'], function(){
+
+        Route::get('/{id}/member', 'ProjectMemberController@index');
+        Route::post('/{id}/member', 'ProjectMemberController@store');
+        Route::get('/{id}/member/{memberId}', 'ProjectMemberController@show');
+        Route::put('/{id}/member/{memberId}', 'ProjectMemberController@update');
+        Route::delete('/{id}/member/{memberId}', 'ProjectMemberController@destroy');
 
         Route::get('/{id}/note', 'ProjectNoteController@index');
         Route::post('/{id}/note', 'ProjectNoteController@store');

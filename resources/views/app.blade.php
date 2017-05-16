@@ -111,10 +111,8 @@
 		<script src="{{asset('build/js/controllers/projectTask/projectTaskRemove.js')}}"></script>
 
 
-		<script src="{{asset('build/js/controllers/projectMember/projectMemberList.js')}}"></script>
 		<script src="{{asset('build/js/controllers/projectMember/projectMemberListAll.js')}}"></script>
 		<script src="{{asset('build/js/controllers/projectMember/projectMemberNew.js')}}"></script>
-		<script src="{{asset('build/js/controllers/projectMember/projectMemberEdit.js')}}"></script>
 		<script src="{{asset('build/js/controllers/projectMember/projectMemberRemove.js')}}"></script>
 
 		<script src="{{asset('build/js/controllers/projectFile/projectFileListAll.js')}}"></script>
