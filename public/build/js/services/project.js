@@ -1,6 +1,7 @@
 angular.module('app.services').
     service('Project', ['$resource','$filter','$httpParamSerializer','appConfig',
         function($resource,$filter,$httpParamSerializer,appConfig){
+
             function transformData(data){
                 if (angular.isObject(data) && data.hasOwnProperty('due_date')){
                     //console.log($filter('date')(data.due_date,'yyyy-MM-dd'));
@@ -11,6 +12,7 @@ angular.module('app.services').
 
                 }
             }
+
             return $resource(appConfig.baseUrl+'/project/:id',{id:'@id'},{
                 save: {
                         method:'POST',
@@ -29,6 +31,9 @@ angular.module('app.services').
                         return ob;
                     }
                 },
+                // query: {
+                //     isArray: false
+                // },
                 update: {
                         method:'PUT',
                         transformRequest:transformData

@@ -59,7 +59,6 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-
         return $this->repository->find($id);
 
         //dd($id);
