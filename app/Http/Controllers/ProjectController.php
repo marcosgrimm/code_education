@@ -32,11 +32,10 @@ class ProjectController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $owner_id = \Authorizer::getResourceOwnerId();
-//dd(123);
-        return $this->repository->with(['owner','client','notes'])->findWhere(['owner_id'=>$owner_id]);
+        return $this->repository->findOwner(\Authorizer::getResourceOwnerId(),$request->query->get('limit'));
+
     }
 
     /**

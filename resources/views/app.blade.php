@@ -7,11 +7,12 @@
 	<title>Laravel</title>
 
 	@if(Config::get('app.debug'))
-		<link href="{{asset('build/css/app.css')}}" rel="stylesheet"/>
-		<link href="{{asset('build/css/components.css')}}" rel="stylesheet"/>
-		<link href="{{asset('build/css/flaticon.css')}}" rel="stylesheet"/>
 		<link href="{{asset('build/css/font-awesome.css')}}" rel="stylesheet"/>
+		<link href="{{asset('build/css/flaticon.css')}}" rel="stylesheet"/>
+
 		<link href="{{asset('build/css/vendor/bootstrap-theme.min.css')}}" rel="stylesheet"/>
+		<link href="{{asset('build/css/components.css')}}" rel="stylesheet"/>
+		<link href="{{asset('build/css/app.css')}}" rel="stylesheet"/>
 	@else
 		<link href="{{elixir('css/all.css')}}" rel="stylesheet"/>
 	@endif
@@ -27,44 +28,9 @@
 	<![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Laravel</a>
-			</div>
 
-			<div class="collapse navbar-collapse" id="navbar">
-				<ul class="nav navbar-nav">
-					<li><a href="{{ url('/') }}">Welcome</a></li>
-				</ul>
 
-				<ul class="nav navbar-nav navbar-right">
-					@if(auth()->guest())
-						@if(!Request::is('auth/login'))
-							<li><a href="{{ url('/#/login') }}">Login</a></li>
-						@endif
-						@if(!Request::is('auth/register'))
-							<li><a href="{{ url('/auth/register') }}">Register</a></li>
-						@endif
-					@else
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ auth()->user()->name }} <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
-							</ul>
-						</li>
-					@endif
-				</ul>
-			</div>
-		</div>
-	</nav>
-
+	<load-template url="build/views/templates/menu.html"></load-template>
 	<div ng-view>
 
 	</div>
@@ -82,7 +48,7 @@
 		<script src="{{asset('build/js/vendor/angular-oauth2.min.js')}}"></script>
 		<script src="{{asset('build/js/vendor/ng-file-upload.js')}}"></script>
 		<script src="{{asset('build/js/vendor/http-auth-interceptor.js')}}"></script>
-
+		<script src="{{asset('build/js/vendor/dirPagination.js')}}"></script>
 
 		<script src="{{asset('build/js/app.js')}}"></script>
 
@@ -90,11 +56,13 @@
 
 
 		<!-- CONTROLLERS !-->
+		<script src="{{asset('build/js/controllers/menu.js')}}"></script>
 		<script src="{{asset('build/js/controllers/login.js')}}"></script>
 		<script src="{{asset('build/js/controllers/loginModal.js')}}"></script>
 		<script src="{{asset('build/js/controllers/home.js')}}"></script>
 
 		<script src="{{asset('build/js/controllers/client/clientList.js')}}"></script>
+		<script src="{{asset('build/js/controllers/client/clientDashboard.js')}}"></script>
 		<script src="{{asset('build/js/controllers/client/clientListAll.js')}}"></script>
 		<script src="{{asset('build/js/controllers/client/clientNew.js')}}"></script>
 		<script src="{{asset('build/js/controllers/client/clientEdit.js')}}"></script>
@@ -123,6 +91,7 @@
 		<script src="{{asset('build/js/controllers/projectFile/projectFileEdit.js')}}"></script>
 		<script src="{{asset('build/js/controllers/projectFile/projectFileRemove.js')}}"></script>
 
+		<script src="{{asset('build/js/controllers/project/projectDashboard.js')}}"></script>
 		<script src="{{asset('build/js/controllers/project/projectList.js')}}"></script>
 		<script src="{{asset('build/js/controllers/project/projectListAll.js')}}"></script>
 		<script src="{{asset('build/js/controllers/project/projectNew.js')}}"></script>
@@ -130,8 +99,10 @@
 		<script src="{{asset('build/js/controllers/project/projectRemove.js')}}"></script>
 
 		<!-- DIRECTIVES -->
+		<script src="{{asset('build/js/directives/menuActivated.js')}}"></script>
 		<script src="{{asset('build/js/directives/projectFileDownload	.js')}}"></script>
 		<script src="{{asset('build/js/directives/loginForm.js')}}"></script>
+		<script src="{{asset('build/js/directives/loadTemplate.js')}}"></script>
 
 		<!-- FILTERS -->
 		<script src="{{asset('build/js/filters/dateBr.js')}}"></script>

@@ -28,10 +28,10 @@ class ClientController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function index(Request $request)
     {
-
-        return $this->repository->with(['projects'])->all();
+        $limit = $request->query->get('limit',15);
+        return $this->repository->with(['projects'])->paginate($limit);
     }
 
     /**

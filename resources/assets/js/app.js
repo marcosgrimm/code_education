@@ -1,7 +1,8 @@
 var app = angular.module('app',[
     'ngRoute','angular-oauth2','app.controllers','app.services','app.filters', 'app.directives',
     "ui.bootstrap.typeahead",'ui.bootstrap.datepicker','ui.bootstrap.tpls','ui.bootstrap.modal',
-    'ngFileUpload','http-auth-interceptor',
+    'ngFileUpload','http-auth-interceptor','angularUtils.directives.dirPagination',
+    'ui.bootstrap.dropdown','ui.bootstrap.tabs'
 
 ]);
 
@@ -11,6 +12,7 @@ angular.module('app.directives', []);
 angular.module('app.services',['ngResource']);
 app.provider('appConfig', ['$httpParamSerializerProvider', function($httpParamSerializerProvider){
     var config = {
+        appName: 'ProjectManager', // Project Manager
         baseUrl: 'http://localhost:8000',
         urls: {
             projectFile:'/project/{{id}}/file/{{idFile}}'
@@ -35,9 +37,13 @@ app.provider('appConfig', ['$httpParamSerializerProvider', function($httpParamSe
                 if (headersGetter['content-type'] == 'application/json' ||
                     headersGetter['content-type'] == 'text/json') {
                     var dataJson = JSON.parse(data);
+                    console.log(dataJson);
                     if (dataJson.hasOwnProperty('data') && Object.keys(dataJson).length == 1) {
+
                         dataJson = dataJson.data;
                     }
+
+
                     return dataJson;
                 }
                 return data;
@@ -62,8 +68,11 @@ app.provider('appConfig', ['$httpParamSerializerProvider', function($httpParamSe
 }]);
 
 app.config(['$routeProvider', '$httpProvider','OAuthProvider','OAuthTokenProvider','appConfigProvider',
-    function($routeProvider,$httpProvider,OAuthProvider,OAuthTokenProvider,appConfigProvider){
+    function($routeProvider,   $httpProvider,OAuthProvider,OAuthTokenProvider,appConfigProvider){
     //console.log(data);
+    // angular.extend($navbarProvider.defaults,{
+    //     activeClass: 'active'
+    // });
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
     $httpProvider.defaults.headers.put['Content-Type']  = 'application/x-www-form-urlencoded;charset=utf-8';
     $httpProvider.defaults.transformRequest = appConfigProvider.config.utils.transformRequest;
@@ -90,72 +99,99 @@ app.config(['$routeProvider', '$httpProvider','OAuthProvider','OAuthTokenProvide
         })
         .when('/home',{
             templateUrl:'build/views/home.html',
-            controller:'HomeController'
+            controller:'HomeController',
+            title: 'Início'
+        })
+        .when('/clients/dashboard',{
+            templateUrl:'build/views/client/dashboard.html',
+            controller:'ClientDashboardController',
+            title: 'Clientes'
         })
         .when('/clients',{
             templateUrl:'build/views/client/listAll.html',
-            controller:'ClientsListControllerAll'
+            controller:'ClientsListControllerAll',
+            title: 'Clientes'
         })
         .when('/client/new',{
             templateUrl:'build/views/client/new.html',
-            controller:'ClientNewController'
+            controller:'ClientNewController',
+            title: 'Clientes'
         })
         .when('/client/:id',{
             templateUrl:'build/views/client/list.html',
-            controller:'ClientListController'
+            controller:'ClientListController',
+            title: 'Clientes'
         })
         .when('/client/:id/edit',{
             templateUrl:'build/views/client/edit.html',
-            controller:'ClientEditController'
+            controller:'ClientEditController',
+            title: 'Clientes'
         })
         .when('/client/:id/remove',{
             templateUrl:'build/views/client/remove.html',
-            controller:'ClientRemoveController'
+            controller:'ClientRemoveController',
+            title: 'Clientes'
         })
 
+        .when('/projects/dashboard',{
+            templateUrl:'build/views/project/dashboard.html',
+            controller:'ProjectDashboardController',
+            title: 'Projetos'
+        })
         .when('/project/:id/files',{
             templateUrl:'build/views/projectFile/listAll.html',
-            controller:'ProjectFileListAllController'
+            controller:'ProjectFileListAllController',
+            title: 'Arquivos do Projeto'
         })
         .when('/project/:id/file/new',{
             templateUrl:'build/views/projectFile/new.html',
-            controller:'ProjectFileNewController'
+            controller:'ProjectFileNewController',
+            title: 'Arquivos do Projeto'
         })
         .when('/project/:id/file/:fileId/edit',{
             templateUrl:'build/views/projectFile/edit.html',
-            controller:'ProjectFileEditController'
+            controller:'ProjectFileEditController',
+            title: 'Arquivos do Projeto'
         })
         .when('/project/:id/file/:fileId/remove',{
             templateUrl:'build/views/projectFile/remove.html',
-            controller:'ProjectFileRemoveController'
+            controller:'ProjectFileRemoveController',
+            title: 'Arquivos do Projeto'
         })
         .when('/project/:id/notes',{
             templateUrl:'build/views/projectNote/listAll.html',
-            controller:'ProjectNoteListAllController'
+            controller:'ProjectNoteListAllController',
+            title: 'Notas do Projeto'
         })
         .when('/project/:id/note/new',{
             templateUrl:'build/views/projectNote/new.html',
-            controller:'ProjectNoteNewController'
+            controller:'ProjectNoteNewController',
+            title: 'Notas do Projeto'
         })
         .when('/project/:id/note/:noteId',{
             templateUrl:'build/views/projectNote/list.html',
-            controller:'ProjectNoteListController'
+            controller:'ProjectNoteListController',
+            title: 'Notas do Projeto'
         })
         .when('/project/:id/note/:noteId/edit',{
             templateUrl:'build/views/projectNote/edit.html',
-            controller:'ProjectNoteEditController'
+            controller:'ProjectNoteEditController',
+            title: 'Notas do Projeto'
         })
         .when('/project/:id/note/:noteId/remove',{
             templateUrl:'build/views/projectNote/remove.html',
-            controller:'ProjectNoteRemoveController'
+            controller:'ProjectNoteRemoveController',
+            title: 'Notas do Projeto'
         })
         .when('/project/:id/tasks',{
             templateUrl:'build/views/projectTask/listAll.html',
-            controller:'ProjectTaskListAllController'
+            controller:'ProjectTaskListAllController',
+            title: 'Tarefas do Projeto'
         })
         .when('/project/:id/task/new',{
             templateUrl:'build/views/projectTask/new.html',
-            controller:'ProjectTaskNewController'
+            controller:'ProjectTaskNewController',
+            title: 'Tarefas do Projeto'
         })
         .when('/project/:id/task/:taskId',{
             templateUrl:'build/views/projectTask/list.html',
@@ -167,39 +203,48 @@ app.config(['$routeProvider', '$httpProvider','OAuthProvider','OAuthTokenProvide
         })
         .when('/project/:id/task/:taskId/remove',{
             templateUrl:'build/views/projectTask/remove.html',
-            controller:'ProjectTaskRemoveController'
+            controller:'ProjectTaskRemoveController',
+            title: 'Tarefas do Projeto'
         })
         .when('/project/:id/members',{
             templateUrl:'build/views/projectMember/listAll.html',
-            controller:'ProjectMemberListAllController'
+            controller:'ProjectMemberListAllController',
+            title: 'Membros do Projeto'
         })
         .when('/project/:id/member/new',{
             templateUrl:'build/views/projectMember/new.html',
-            controller:'ProjectMemberNewController'
+            controller:'ProjectMemberNewController',
+            title: 'Membros do Projeto'
         })
         .when('/project/:id/member/:memberId/remove',{
             templateUrl:'build/views/projectMember/remove.html',
-            controller:'ProjectMemberRemoveController'
+            controller:'ProjectMemberRemoveController',
+            title: 'Membros do Projeto'
         })
         .when('/projects',{
             templateUrl:'build/views/project/listAll.html',
-            controller:'ProjectListAllController'
+            controller:'ProjectListAllController',
+            title: 'Projetos'
         })
         .when('/project/new',{
             templateUrl:'build/views/project/new.html',
-            controller:'ProjectNewController'
+            controller:'ProjectNewController',
+            title: 'Projetos'
         })
         .when('/project/:id',{
             templateUrl:'build/views/project/list.html',
-            controller:'ProjectListController'
+            controller:'ProjectListController',
+            title: 'Projetos'
         })
         .when('/project/:id/edit',{
             templateUrl:'build/views/project/edit.html',
-            controller:'ProjectEditController'
+            controller:'ProjectEditController',
+            title: 'Projetos'
         })
         .when('/project/:id/remove',{
             templateUrl:'build/views/project/remove.html',
-            controller:'ProjectRemoveController'
+            controller:'ProjectRemoveController',
+            title: 'Projetos'
         });
         OAuthProvider.configure({
             baseUrl: appConfigProvider.config.baseUrl,
@@ -218,13 +263,20 @@ app.config(['$routeProvider', '$httpProvider','OAuthProvider','OAuthTokenProvide
 }]);
 
 
-app.run(['$rootScope','$location', '$window','$http','$modal', 'httpBuffer', 'OAuth',
-    function($rootScope, $location, $window, $http, $modal, httpBuffer, OAuth) {
+app.run(['$rootScope','$location', '$window','$http','$modal', 'httpBuffer', 'OAuth','appConfig',
+    function($rootScope, $location, $window, $http, $modal, httpBuffer, OAuth, appConfig) {
     $rootScope.$on('$routeChangeStart', function (event, next,current) {
         if (next.$$route.originalPath != '/login' && OAuth.isAuthenticated() == false){
             $location.path('login');
         }
     });
+
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.pageTitle = current.$$route.title;
+        document.title = appConfig.appName+' - '+current.$$route.title;
+    });
+
+
     $rootScope.$on('oauth:error', function(event, data) {
         // Ignore `invalid_grant` error - should be catched on `LoginController`.
         if ('invalid_grant' === data.rejection.data.error) {

@@ -1,0 +1,155 @@
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="boxed-manager">
+                    <div class="boxed-manager-menu">
+                        <ul class="boxed-manager-menu-nav">
+                            <li class="boxed-manager-menu-nav-header">
+                                <h3 class="h4">
+                                    Projetos
+
+                                    <div class="btn-group pull-right">
+                                        <a ng-href="#/projects" class="btn btn-primary btn-sm text-upper">
+                                            <small>Ver todos</small>
+                                        </a>
+                                        <a ng-href="#/project/new" class="btn btn-default btn-sm">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </div>
+                                </h3>
+                            </li>
+                            <li class="boxed-manager-menu-nav-item" ng-repeat="project in projects">
+                                <a href="javascript:void (0)" ng-click="pickProject(project)" >
+                                    <header>
+                                        <h4 class="h4 text-boulder">{{project.name}}</h4>
+                                        <small class="text-upper text-silver">{{project.client.data.name}}</small>
+                                    </header>
+                                    <p class=" status">
+                                        <i class="fa fa-circle"></i> {{project.status}}
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="boxed-manager-main arrow" ng-if="projectPicked">
+                        <div class="boxed-manager-main-header">
+                            <h4 class="h4">
+                                {{projectPicked.name}}
+                                <small>({{projectPicked.progress}}%)</small>
+
+                                <div class="btn-group pull-right">
+                                    <a ng-href="#/project/{{projectPicked.project_id}}/edit"
+                                       class="btn btn-default btn-xs" title="Editar">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    <a href="#/project/{{projectPicked.project_id}}/remove"
+                                       class="btn btn-danger btn-xs" title="Apagar">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </h4>
+                        </div>
+                        <div class="boxed-manager-main-body">
+
+                            <tabset>
+                                <tab heading="Detalhes">
+                                    {{projectPicked.description}}
+                                </tab>
+                                <tab heading="Tarefas">
+
+                                    <div class="boxed-manager-main-header" ng-if="projectPicked.tasks.data">
+                                        <h4 class="h4">
+                                            <div class="btn-group">
+                                                <a href="#/project/{{project.project_id}}/task/new" class="btn btn-default btn-xs" title="Novo">
+                                                    <i class="fa fa-plus"></i>
+                                                </a>
+                                            </div>
+                                        </h4>
+                                    </div>
+                                    <div class="task-list">
+                                        <ul class="task-list-body">
+                                            <li ng-repeat="task in projectPicked.tasks.data">
+                                                <label>
+                                                    <input type="checkbox" name="" id="{{t.id}}" ng-checked="task.status==3"
+                                                           ng-disabled="task.status==3" ng-click="updateTask(task)"/>
+                                                    <span class="status"
+                                                          ng-class="{'text-warning':task.status==1, 'text-info':task.status==2, 'text-success':task.status==3}">
+                                                                    {{task.name}}
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+
+                                </tab>
+                                <tab heading="Arquivos">Arquivos
+                                    <div class="files-list-blocks">
+                                        <project-file-download project-id="{{projectPicked.project_id}}" id-file="{{projectFile.id}}" ng-repeat="projectFile in projectPicked.files.data">
+
+                                        </project-file-download>
+
+                                        <!--<a href="">-->
+                                            <!--<img src="build/images/icons/ico-ai.png" alt="" />-->
+                                        <!--</a>-->
+                                    </div>
+
+                                </tab>
+                                <tab heading="Notas">
+
+
+
+                                </tab>
+                            </tabset>
+                        </div>
+                    </div>
+                    <div class="boxed-manager-info" ng-if="projectPicked">
+                        <div class="boxed-manager-info-header">
+                            <h4 class="h4">Estatísticas do projeto</h4>
+                        </div>
+                        <div class="boxed-manager-info-body">
+                            <div class="boxed-manager-info-body-chart text-center">
+                                <div class="radial-progress radial-progress-lg radial-progress-danger"
+                                     data-progress="{{projectPicked.progress}}">
+                                    <div class="circle">
+                                        <div class="mask full">
+                                            <div class="fill"></div>
+                                        </div>
+                                        <div class="mask half">
+                                            <div class="fill"></div>
+                                            <div class="fill fix"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+                                    <div class="inset">
+                                        <div class="percentage">
+                                            <div class="numbers">{{projectPicked.progress}}%</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                Progresso esperado: 100%
+                            </div>
+                            <ul class="list-styled">
+                                <li class="list-styled-header text-upper text-center">
+                                    Cliente
+                                </li>
+                                <li class="text-center text-silver">{{projectPicked.client.data.name}}</li>
+                                <li class="list-styled-header text-upper text-center">
+                                    Data de entrega
+                                </li>
+                                <li class="text-center text-silver">{{projectPicked.due_date | dateBr}}</li>
+                                <li class="list-styled-header text-upper text-center">
+                                    Tarefas ({{projectPicked.tasks_count}})
+                                </li>
+                                <li class="text-center text-silver">{{projectPicked.tasks_opened}} terefas em aberto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

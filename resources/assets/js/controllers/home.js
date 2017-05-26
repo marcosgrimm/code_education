@@ -1,4 +1,14 @@
 angular.module('app.controllers')
-    .controller('HomeController',['$scope','$cookies',function($scope,$cookies){
-        //console.log($cookies.getObject('user').email);
+    .controller('HomeController',['$scope','Project',function($scope,Project){
+
+        Project.query({
+            orderBy: 'created_at',
+            sortedBy: 'desc',
+            limit: 8
+        },function(response){
+            $scope.projects = response.data;
+        });
+
+
+
     }]);

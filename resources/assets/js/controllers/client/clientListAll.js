@@ -1,7 +1,8 @@
 angular.module('app.controllers')
     .controller('ClientsListControllerAll',['$scope','Client',function($scope,Client){
 
-        $scope.clients = Client.query();
-
+        Client.query({},function (response) {
+            $scope.clients = response.data;
+        });
 
     }]);

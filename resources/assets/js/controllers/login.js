@@ -1,7 +1,7 @@
 
 angular.module('app.controllers')
     .controller('LoginController',['$scope','$location','$cookies','User','OAuth',function($scope,$location,$cookies,User,OAuth){
-        //console.log($scope.user);
+        // console.log($scope.user);
 
         $scope.user = {
             username:'',

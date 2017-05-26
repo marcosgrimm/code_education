@@ -24,7 +24,8 @@
                         </tr>
                        </thead>
                        <tbody>
-                            <tr ng-repeat="project  in projects  track by $index">
+                            <tr dir-paginate="project in projects | itemsPerPage: projectsPerPage track by $index"
+                                total-items="totalProjects" current-page="pagination.current">
                                 <th>{{$index+1}}</th>
                                 <td>{{project.client.data.name}}</td>
                                 <td>{{project.name}}</td>
@@ -34,14 +35,21 @@
                                 <td>{{project.due_date | dateBr}}</td>
                                 <td class="text-center">
                                     <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default  btn-xs "><a ng-href="#/project/{{project.project_id}}/edit">Editar</a> </button>
-                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{project.project_id}}/remove">Excluir</a></button>
-                                        <button type="button" class="btn btn-default btn-xs "><a ng-href="#/project/{{project.project_id}}">Detalhar</a></button>
+                                        <button type="button" class="btn btn-default  btn-xs ">
+                                            <a ng-href="#/project/{{project.project_id}}/edit">Editar</a>
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-xs ">
+                                            <a ng-href="#/project/{{project.project_id}}/remove">Excluir</a>
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-xs ">
+                                            <a ng-href="#/project/{{project.project_id}}">Detalhar</a>
+                                        </button>
                                     </div>
                                 </td>
                             </tr>
                        </tbody>
                    </table>
+                    <dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>
                 </div>
             </div>
         </div>
