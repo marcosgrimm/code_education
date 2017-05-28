@@ -2,7 +2,7 @@ var app = angular.module('app',[
     'ngRoute','angular-oauth2','app.controllers','app.services','app.filters', 'app.directives',
     "ui.bootstrap.typeahead",'ui.bootstrap.datepicker','ui.bootstrap.tpls','ui.bootstrap.modal',
     'ngFileUpload','http-auth-interceptor','angularUtils.directives.dirPagination',
-    'ui.bootstrap.dropdown','ui.bootstrap.tabs'
+    'ui.bootstrap.dropdown','ui.bootstrap.tabs','pusher-angular','ui-notification'
 
 ]);
 
@@ -13,6 +13,7 @@ angular.module('app.services',['ngResource']);
 app.provider('appConfig', ['$httpParamSerializerProvider', function($httpParamSerializerProvider){
     var config = {
         appName: 'ProjectManager', // Project Manager
+        pusherkey: '884ebf2b4211ece013c1',
         baseUrl: 'http://localhost:8000',
         urls: {
             projectFile:'/project/{{id}}/file/{{idFile}}'
@@ -37,7 +38,7 @@ app.provider('appConfig', ['$httpParamSerializerProvider', function($httpParamSe
                 if (headersGetter['content-type'] == 'application/json' ||
                     headersGetter['content-type'] == 'text/json') {
                     var dataJson = JSON.parse(data);
-                    console.log(dataJson);
+                    // console.log(dataJson);
                     if (dataJson.hasOwnProperty('data') && Object.keys(dataJson).length == 1) {
 
                         dataJson = dataJson.data;
@@ -263,40 +264,75 @@ app.config(['$routeProvider', '$httpProvider','OAuthProvider','OAuthTokenProvide
 }]);
 
 
-app.run(['$rootScope','$location', '$window','$http','$modal', 'httpBuffer', 'OAuth','appConfig',
-    function($rootScope, $location, $window, $http, $modal, httpBuffer, OAuth, appConfig) {
-    $rootScope.$on('$routeChangeStart', function (event, next,current) {
-        if (next.$$route.originalPath != '/login' && OAuth.isAuthenticated() == false){
-            $location.path('login');
-        }
-    });
+app.run(['$rootScope','$location', '$window','$http','$modal', '$cookies','$pusher',
+        'httpBuffer', 'OAuth','appConfig','Notification',
 
-    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-        $rootScope.pageTitle = current.$$route.title;
-        document.title = appConfig.appName+' - '+current.$$route.title;
-    });
+    function($rootScope, $location, $window, $http, $modal,$cookies,$pusher, httpBuffer, OAuth, appConfig, Notification) {
+
+        $rootScope.$on('pusher-build', function (event, data) {
+            if (data.next.$$route.originalPath != '/login') {
+                if (OAuth.isAuthenticated()) {
+                    if (!window.client) {
+                        window.client = new Pusher(appConfig.pusherkey);
+                        var pusher = $pusher(window.client);
+                        var channel = pusher.subscribe('user.' + $cookies.getObject('user').id);
+                        channel.bind('CodeProject\\Events\\TaskWasIncluded',
+                            function (data) {
+                                var name = data.task.name;
+                                 Notification.success({title: 'Notificação de Task', message: 'Tarefa: '+name+', foi incluída!', delay: 10000});
+                                // console.log(data)
+                            }
+                        );
+                    }
+                }
+            }
+        });
+
+        $rootScope.$on('pusher-destroy', function (event, data) {
+            if (data.next.$$route.originalPath == '/login') {
+                if (window.client) {
+                    window.client.disconnect();
+                    window.client = null;
+                }
+            }
+        });
 
 
-    $rootScope.$on('oauth:error', function(event, data) {
-        // Ignore `invalid_grant` error - should be catched on `LoginController`.
-        if ('invalid_grant' === data.rejection.data.error) {
-            return;
-        }
+        $rootScope.$on('$routeChangeStart', function (event, next, current) {
+            if (next.$$route.originalPath != '/login' && OAuth.isAuthenticated() == false) {
+                $location.path('login');
+            }
 
-        // Refresh token when a `invalid_token` error occurs.
-        if ('access_denied' === data.rejection.data.error) {
-            httpBuffer.append(data.rejection.config,data.deferred);
-            if (!$rootScope.loginModalOpened){
-                var modalInstance = $modal.open({
-                    templateUrl: 'build/views/templates/loginModal.html',
-                    controller: 'LoginModalController'
-                });
-                $rootScope.loginModalOpened = true;
+            $rootScope.$emit('pusher-build', {next: next});
+            $rootScope.$emit('pusher-destroy', {next: next});
+        });
+
+        $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+            $rootScope.pageTitle = current.$$route.title;
+            document.title = appConfig.appName + ' - ' + current.$$route.title;
+        });
+
+
+        $rootScope.$on('oauth:error', function (event, data) {
+            // Ignore `invalid_grant` error - should be catched on `LoginController`.
+            if ('invalid_grant' === data.rejection.data.error) {
                 return;
             }
-        }
 
-        // Redirect to `/login` with the `error_reason`.
-        $location.path('login');
-    });
-}]);
+            // Refresh token when a `invalid_token` error occurs.
+            if ('access_denied' === data.rejection.data.error) {
+                httpBuffer.append(data.rejection.config, data.deferred);
+                if (!$rootScope.loginModalOpened) {
+                    var modalInstance = $modal.open({
+                        templateUrl: 'build/views/templates/loginModal.html',
+                        controller: 'LoginModalController'
+                    });
+                    $rootScope.loginModalOpened = true;
+                    return;
+                }
+            }
+
+            // Redirect to `/login` with the `error_reason`.
+            $location.path('login');
+        });
+    }]);
